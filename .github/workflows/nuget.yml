@@ -13,4 +13,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/check
+      uses: actions/checkout@v1
+      
+    - name: Setup Nuget
+      uses: nu
