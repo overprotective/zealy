@@ -16,4 +16,6 @@ jobs:
       uses: actions/checkout@v1
       
     - name: Setup Nuget
-      uses: nu
+      uses: nuget/setup-nuget@v1
+      
+    - name: Nuget pack
