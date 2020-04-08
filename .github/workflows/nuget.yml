@@ -19,3 +19,6 @@ jobs:
       uses: nuget/setup-nuget@v1
       
     - name: Nuget pack
+      run: |
+        nuget restore
+        nuget pack Co
