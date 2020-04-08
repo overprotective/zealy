@@ -21,4 +21,4 @@ jobs:
     - name: Nuget pack
       run: |
         nuget restore
-        nuget pack Co
+        nuget pack ConfigurationManager\ConfigurationManager.cs
