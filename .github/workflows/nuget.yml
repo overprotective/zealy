@@ -21,4 +21,6 @@ jobs:
     - name: Nuget pack
       run: |
         nuget restore
-        nuget pack ConfigurationManager\ConfigurationManager.cs
+        nuget pack ConfigurationManager\ConfigurationManager.csproj -build -properties Configuration=Release
+      
+    - 
