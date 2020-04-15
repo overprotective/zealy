@@ -28,4 +28,4 @@ jobs:
         NUGET_URL: https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json
         NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
       run: |
-        nuget sources add -name 
+        nuget sources add -name "IllusionMods" -src ${env:NUGET_UR
