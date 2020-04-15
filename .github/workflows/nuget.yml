@@ -23,4 +23,6 @@ jobs:
         nuget restore
         nuget pack ConfigurationManager\ConfigurationManager.csproj -build -properties Configuration=Release
       
-    - 
+    - name: Nuget push
+      env:
+        NUGET_
