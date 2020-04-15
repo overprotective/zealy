@@ -25,4 +25,4 @@ jobs:
       
     - name: Nuget push
       env:
-        NUGET_
+        NUGET_URL: https://pkgs.dev.azure.com/IllusionMods/Nuge
