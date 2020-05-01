@@ -29,3 +29,4 @@ jobs:
         NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
       run: |
         nuget sources add -name "IllusionMods" -src ${env:NUGET_URL} -username "token" -password ${env:NUGET_TOKEN}
+        nuget push *.nupkg -apikey key -noninteractive -skipduplicate -sr
