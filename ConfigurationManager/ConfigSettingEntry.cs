@@ -10,4 +10,6 @@ namespace ConfigurationManager
 {
     internal sealed class ConfigSettingEntry : SettingEntryBase
     {
-        public ConfigEntr
+        public ConfigEntryBase Entry { get; }
+
+        public ConfigSettingEnt
