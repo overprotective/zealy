@@ -8,4 +8,6 @@ using BepInEx.Configuration;
 
 namespace ConfigurationManager
 {
-    internal sealed class ConfigSettingEntry : Se
+    internal sealed class ConfigSettingEntry : SettingEntryBase
+    {
+        public ConfigEntr
