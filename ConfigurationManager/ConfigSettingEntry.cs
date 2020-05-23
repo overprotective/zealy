@@ -12,4 +12,4 @@ namespace ConfigurationManager
     {
         public ConfigEntryBase Entry { get; }
 
-        public ConfigSettingEnt
+        public ConfigSettingEntry(ConfigEntryBase entry, BaseUnityPlugin owner)
