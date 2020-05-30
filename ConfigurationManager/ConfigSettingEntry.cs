@@ -15,3 +15,5 @@ namespace ConfigurationManager
         public ConfigSettingEntry(ConfigEntryBase entry, BaseUnityPlugin owner)
         {
             Entry = entry;
+
+            DispName = entry.Definition.Key
