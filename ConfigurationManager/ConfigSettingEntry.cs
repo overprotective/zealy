@@ -16,4 +16,6 @@ namespace ConfigurationManager
         {
             Entry = entry;
 
-            DispName = entry.Definition.Key
+            DispName = entry.Definition.Key;
+            Category = entry.Definition.Section;
+ 
