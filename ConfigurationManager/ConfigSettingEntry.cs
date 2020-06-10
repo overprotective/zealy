@@ -18,4 +18,6 @@ namespace ConfigurationManager
 
             DispName = entry.Definition.Key;
             Category = entry.Definition.Section;
-            Description = entry.Description?.De
+            Description = entry.Description?.Description;
+
+            var converter
