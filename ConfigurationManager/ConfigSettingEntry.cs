@@ -20,4 +20,6 @@ namespace ConfigurationManager
             Category = entry.Definition.Section;
             Description = entry.Description?.Description;
 
-            var converter = TomlTypeConverter.GetConverter(entry.SettingTy
+            var converter = TomlTypeConverter.GetConverter(entry.SettingType);
+            if (converter != null)
+  
