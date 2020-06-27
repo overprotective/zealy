@@ -27,4 +27,4 @@ namespace ConfigurationManager
                 StrToObj = s => converter.ConvertToObject(s, entry.SettingType);
             }
 
-          
+            var values = entry.Description?.AcceptableV
