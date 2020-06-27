@@ -24,4 +24,7 @@ namespace ConfigurationManager
             if (converter != null)
             {
                 ObjToStr = o => converter.ConvertToString(o, entry.SettingType);
-                StrToObj = s => converter.ConvertToObject(s, ent
+                StrToObj = s => converter.ConvertToObject(s, entry.SettingType);
+            }
+
+          
