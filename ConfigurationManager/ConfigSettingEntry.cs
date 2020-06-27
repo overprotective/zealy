@@ -31,4 +31,6 @@ namespace ConfigurationManager
             if (values != null)
                 GetAcceptableValues(values);
 
-            Default
+            DefaultValue = entry.DefaultValue;
+
+            S
