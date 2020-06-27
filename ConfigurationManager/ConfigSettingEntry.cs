@@ -23,4 +23,5 @@ namespace ConfigurationManager
             var converter = TomlTypeConverter.GetConverter(entry.SettingType);
             if (converter != null)
             {
-                ObjToStr = o => conver
+                ObjToStr = o => converter.ConvertToString(o, entry.SettingType);
+                StrToObj
