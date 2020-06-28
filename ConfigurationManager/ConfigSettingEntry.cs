@@ -33,4 +33,4 @@ namespace ConfigurationManager
 
             DefaultValue = entry.DefaultValue;
 
-            S
+            SetFromAttributes(entry.Description?.Tags, ow
