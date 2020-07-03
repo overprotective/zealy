@@ -36,4 +36,6 @@ namespace ConfigurationManager
             SetFromAttributes(entry.Description?.Tags, owner);
         }
 
-        private void GetAcceptable
+        private void GetAcceptableValues(AcceptableValueBase values)
+        {
+        
