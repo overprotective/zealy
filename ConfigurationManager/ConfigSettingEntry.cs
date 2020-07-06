@@ -38,4 +38,5 @@ namespace ConfigurationManager
 
         private void GetAcceptableValues(AcceptableValueBase values)
         {
-        
+            var t = values.GetType();
+            var
