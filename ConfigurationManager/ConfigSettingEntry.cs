@@ -39,4 +39,4 @@ namespace ConfigurationManager
         private void GetAcceptableValues(AcceptableValueBase values)
         {
             var t = values.GetType();
-            var listProp = t.GetProperty(nameof(AcceptableValu
+            var listProp = t.GetProperty(nameof(AcceptableValueList<bool>.AcceptableValues), Binding
