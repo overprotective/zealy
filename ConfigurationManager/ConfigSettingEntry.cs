@@ -43,3 +43,6 @@ namespace ConfigurationManager
             if (listProp != null)
             {
                 AcceptableValues = ((IEnumerable)listProp.GetValue(values, null)).Cast<object>().ToArray();
+            }
+            else
+            
