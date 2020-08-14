@@ -46,4 +46,4 @@ namespace ConfigurationManager
             }
             else
             {
-                var minProp = t.GetProperty(
+                var minProp = t.GetProperty(nameof(AcceptableValueRange<bool>.Mi
