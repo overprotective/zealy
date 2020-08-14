@@ -45,4 +45,5 @@ namespace ConfigurationManager
                 AcceptableValues = ((IEnumerable)listProp.GetValue(values, null)).Cast<object>().ToArray();
             }
             else
-            
+            {
+                var minProp = t.GetProperty(
