@@ -48,4 +48,5 @@ namespace ConfigurationManager
             {
                 var minProp = t.GetProperty(nameof(AcceptableValueRange<bool>.MinValue), BindingFlags.Instance | BindingFlags.Public);
                 if (minProp != null)
-    
+                {
+                    var maxProp
