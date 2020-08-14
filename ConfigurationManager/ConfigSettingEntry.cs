@@ -42,4 +42,4 @@ namespace ConfigurationManager
             var listProp = t.GetProperty(nameof(AcceptableValueList<bool>.AcceptableValues), BindingFlags.Instance | BindingFlags.Public);
             if (listProp != null)
             {
-                AcceptableValues = ((IEnumerable)listProp.Get
+                AcceptableValues = ((IEnumerable)listProp.GetValue(values, null)).Cast<object>().ToArray();
