@@ -50,4 +50,4 @@ namespace ConfigurationManager
                 if (minProp != null)
                 {
                     var maxProp = t.GetProperty(nameof(AcceptableValueRange<bool>.MaxValue), BindingFlags.Instance | BindingFlags.Public);
-                    if (maxProp == nu
+                    if (maxProp == null) throw new ArgumentNullException(nameof(max
