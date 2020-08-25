@@ -51,4 +51,4 @@ namespace ConfigurationManager
                 {
                     var maxProp = t.GetProperty(nameof(AcceptableValueRange<bool>.MaxValue), BindingFlags.Instance | BindingFlags.Public);
                     if (maxProp == null) throw new ArgumentNullException(nameof(maxProp));
-                    AcceptableValueRange = new Key
+                    AcceptableValueRange = new KeyValuePair<object, object>(minProp.GetVa
