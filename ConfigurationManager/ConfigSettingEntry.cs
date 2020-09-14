@@ -56,4 +56,6 @@ namespace ConfigurationManager
                                          AcceptableValueRange.Key.Equals(0f) && AcceptableValueRange.Value.Equals(1f);
                 }
             }
-   
+        }
+
+        public override Type SettingType => Entry.Se
