@@ -53,4 +53,7 @@ namespace ConfigurationManager
                     if (maxProp == null) throw new ArgumentNullException(nameof(maxProp));
                     AcceptableValueRange = new KeyValuePair<object, object>(minProp.GetValue(values, null), maxProp.GetValue(values, null));
                     ShowRangeAsPercent = (AcceptableValueRange.Key.Equals(0) || AcceptableValueRange.Key.Equals(1)) && AcceptableValueRange.Value.Equals(100) ||
-                                         AcceptableValueRange.Key.Equals(0f) && AcceptableValueRange
+                                         AcceptableValueRange.Key.Equals(0f) && AcceptableValueRange.Value.Equals(1f);
+                }
+            }
+   
