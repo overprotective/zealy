@@ -58,4 +58,7 @@ namespace ConfigurationManager
             }
         }
 
-        public override Type SettingType => Entry.Se
+        public override Type SettingType => Entry.SettingType;
+
+        public override object Get()
+  
