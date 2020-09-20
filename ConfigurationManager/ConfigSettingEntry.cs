@@ -61,4 +61,5 @@ namespace ConfigurationManager
         public override Type SettingType => Entry.SettingType;
 
         public override object Get()
-  
+        {
+            return Entry.BoxedValue
