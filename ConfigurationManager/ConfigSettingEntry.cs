@@ -62,4 +62,7 @@ namespace ConfigurationManager
 
         public override object Get()
         {
-            return Entry.BoxedValue
+            return Entry.BoxedValue;
+        }
+
+        protected override void SetValu
