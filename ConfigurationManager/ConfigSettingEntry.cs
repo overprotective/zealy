@@ -67,4 +67,7 @@ namespace ConfigurationManager
 
         protected override void SetValue(object newVal)
         {
-            Entry.B
+            Entry.BoxedValue = newVal;
+        }
+    }
+}
