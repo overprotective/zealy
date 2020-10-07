@@ -116,3 +116,45 @@ namespace ConfigurationManager
             {
                 if (_displayingWindow == value) return;
                 _displayingWindow = value;
+
+                SettingFieldDrawer.ClearCache();
+
+                if (_displayingWindow)
+                {
+                    CalculateWindowRect();
+
+                    BuildSettingList();
+
+                    _focusSearchBox = true;
+
+                    // Do through reflection for unity 4 compat
+                    if (_curLockState != null)
+                    {
+                        _previousCursorLockState = _obsoleteCursor ? Convert.ToInt32((bool)_curLockState.GetValue(null, null)) : (int)_curLockState.GetValue(null, null);
+                        _previousCursorVisible = (bool)_curVisible.GetValue(null, null);
+                    }
+                }
+                else
+                {
+                    if (!_previousCursorVisible || _previousCursorLockState != 0) // 0 = CursorLockMode.None
+                        SetUnlockCursor(_previousCursorLockState, _previousCursorVisible);
+                }
+
+                DisplayingWindowChanged?.Invoke(this, new ValueChangedEventArgs<bool>(value));
+            }
+        }
+
+        /// <summary>
+        /// Register a custom setting drawer for a given type. The action is ran in OnGui in a single setting slot.
+        /// Do not use any Begin / End layout methods, and avoid raising height from standard.
+        /// </summary>
+        public static void RegisterCustomSettingDrawer(Type settingType, Action<SettingEntryBase> onGuiDrawer)
+        {
+            if (settingType == null) throw new ArgumentNullException(nameof(settingType));
+            if (onGuiDrawer == null) throw new ArgumentNullException(nameof(onGuiDrawer));
+
+            if (SettingFieldDrawer.SettingDrawHandlers.ContainsKey(settingType))
+                Logger.LogWarning("Tried to add a setting drawer for type " + settingType.FullName + " while one already exists.");
+            else
+                SettingFieldDrawer.SettingDrawHandlers[settingType] = onGuiDrawer;
+        }
