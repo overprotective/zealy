@@ -158,3 +158,45 @@ namespace ConfigurationManager
             else
                 SettingFieldDrawer.SettingDrawHandlers[settingType] = onGuiDrawer;
         }
+
+        /// <summary>
+        /// Rebuild the setting list. Use to update the config manager window if config settings were removed or added while it was open.
+        /// </summary>
+        public void BuildSettingList()
+        {
+            SettingSearcher.CollectSettings(out var results, out var modsWithoutSettings, _showDebug);
+
+            _modsWithoutSettings = string.Join(", ", modsWithoutSettings.Select(x => x.TrimStart('!')).OrderBy(x => x).ToArray());
+            _allSettings = results.ToList();
+
+            BuildFilteredSettingList();
+        }
+
+        private void BuildFilteredSettingList()
+        {
+            IEnumerable<SettingEntryBase> results = _allSettings;
+
+            var searchStrings = SearchString.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (searchStrings.Length > 0)
+            {
+                results = results.Where(x => ContainsSearchString(x, searchStrings));
+            }
+            else
+            {
+                if (!_showAdvanced.Value)
+                    results = results.Where(x => x.IsAdvanced != true);
+                if (!_showKeybinds.Value)
+                    results = results.Where(x => !IsKeyboardShortcut(x));
+                if (!_showSettings.Value)
+                    results = results.Where(x => x.IsAdvanced == true || IsKeyboardShortcut(x));
+            }
+
+            const string shortcutsCatName = "Keyboard shortcuts";
+
+            var settingsAreCollapsed = _pluginConfigCollapsedDefault.Value;
+
+            var nonDefaultCollpasingStateByPluginName = new HashSet<string>();
+            foreach (var pluginSetting in _filteredSetings)
+            {
+                if (pluginSetting.Collapsed != settingsAreCollapsed)
