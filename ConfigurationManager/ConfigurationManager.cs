@@ -200,3 +200,57 @@ namespace ConfigurationManager
             foreach (var pluginSetting in _filteredSetings)
             {
                 if (pluginSetting.Collapsed != settingsAreCollapsed)
+                {
+                    nonDefaultCollpasingStateByPluginName.Add(pluginSetting.Info.Name);
+                }
+            }
+
+            _filteredSetings = results
+                .GroupBy(x => x.PluginInfo)
+                .Select(pluginSettings =>
+                {
+                    var categories = pluginSettings
+                        .GroupBy(eb => eb.Category)
+                        .OrderBy(x => string.Equals(x.Key, shortcutsCatName, StringComparison.Ordinal))
+                        .ThenBy(x => x.Key)
+                        .Select(x => new PluginSettingsData.PluginSettingsGroupData { Name = x.Key, Settings = x.OrderByDescending(set => set.Order).ThenBy(set => set.DispName).ToList() });
+
+                    var website = Utils.GetWebsite(pluginSettings.First().PluginInstance);
+
+                    return new PluginSettingsData
+                    {
+                        Info = pluginSettings.Key,
+                        Categories = categories.ToList(),
+                        Collapsed = nonDefaultCollpasingStateByPluginName.Contains(pluginSettings.Key.Name) ? !settingsAreCollapsed : settingsAreCollapsed,
+                        Website = website
+                    };
+                })
+                .OrderBy(x => x.Info.Name)
+                .ToList();
+        }
+
+        private static bool IsKeyboardShortcut(SettingEntryBase x)
+        {
+            return x.SettingType == typeof(KeyboardShortcut);
+        }
+
+        private static bool ContainsSearchString(SettingEntryBase setting, string[] searchStrings)
+        {
+            var combinedSearchTarget = setting.PluginInfo.Name + "\n" +
+                                       setting.PluginInfo.GUID + "\n" +
+                                       setting.DispName + "\n" +
+                                       setting.Category + "\n" +
+                                       setting.Description + "\n" +
+                                       setting.DefaultValue + "\n" +
+                                       setting.Get();
+
+            return searchStrings.All(s => combinedSearchTarget.IndexOf(s, StringComparison.InvariantCultureIgnoreCase) >= 0);
+        }
+
+        private void CalculateWindowRect()
+        {
+            var width = Mathf.Min(Screen.width, 650);
+            var height = Screen.height < 560 ? Screen.height : Screen.height - 100;
+            var offsetX = Mathf.RoundToInt((Screen.width - width) / 2f);
+            var offsetY = Mathf.RoundToInt((Screen.height - height) / 2f);
+            SettingWindowRect = new Rect(offsetX, offsetY, width, height);
