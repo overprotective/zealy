@@ -304,3 +304,54 @@ namespace ConfigurationManager
                 {
                     normal = new GUIStyleState { textColor = Color.white, background = TooltipBg },
                     wordWrap = true,
+                    alignment = TextAnchor.MiddleCenter
+                };
+
+                const int width = 400;
+                var height = style.CalcHeight(new GUIContent(GUI.tooltip), 400) + 10;
+
+                var x = currentEvent.mousePosition.x + width > area.width
+                    ? area.width - width
+                    : currentEvent.mousePosition.x;
+
+                var y = currentEvent.mousePosition.y + 25 + height > area.height
+                    ? currentEvent.mousePosition.y - height
+                    : currentEvent.mousePosition.y + 25;
+
+                GUI.Box(new Rect(x, y, width, height), GUI.tooltip, style);
+            }
+        }
+
+        private void SettingsWindow(int id)
+        {
+            DrawWindowHeader();
+
+            _settingWindowScrollPos = GUILayout.BeginScrollView(_settingWindowScrollPos, false, true);
+
+            var scrollPosition = _settingWindowScrollPos.y;
+            var scrollHeight = SettingWindowRect.height;
+
+            GUILayout.BeginVertical();
+            {
+                if (string.IsNullOrEmpty(SearchString))
+                {
+                    DrawTips();
+
+                    if (_tipsHeight == 0 && Event.current.type == EventType.Repaint)
+                        _tipsHeight = (int)GUILayoutUtility.GetLastRect().height;
+                }
+
+                var currentHeight = _tipsHeight;
+
+                foreach (var plugin in _filteredSetings)
+                {
+                    var visible = plugin.Height == 0 || currentHeight + plugin.Height >= scrollPosition && currentHeight <= scrollPosition + scrollHeight;
+
+                    if (visible)
+                    {
+                        try
+                        {
+                            DrawSinglePlugin(plugin);
+                        }
+                        catch (ArgumentException)
+                        {
