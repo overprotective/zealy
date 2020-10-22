@@ -254,3 +254,53 @@ namespace ConfigurationManager
             var offsetX = Mathf.RoundToInt((Screen.width - width) / 2f);
             var offsetY = Mathf.RoundToInt((Screen.height - height) / 2f);
             SettingWindowRect = new Rect(offsetX, offsetY, width, height);
+
+            _screenRect = new Rect(0, 0, Screen.width, Screen.height);
+
+            LeftColumnWidth = Mathf.RoundToInt(SettingWindowRect.width / 2.5f);
+            RightColumnWidth = (int)SettingWindowRect.width - LeftColumnWidth - 115;
+
+            _windowWasMoved = false;
+        }
+
+        private void OnGUI()
+        {
+            if (DisplayingWindow)
+            {
+                SetUnlockCursor(0, true);
+
+                // If the window hasn't been moved by the user yet, block the whole screen and use a solid background to make the window easier to see
+                if (!_windowWasMoved)
+                {
+                    if (GUI.Button(_screenRect, string.Empty, GUI.skin.box) &&
+                        !SettingWindowRect.Contains(UnityInput.Current.mousePosition))
+                        DisplayingWindow = false;
+
+                    GUI.Box(SettingWindowRect, GUIContent.none, new GUIStyle { normal = new GUIStyleState { background = WindowBackground } });
+                }
+
+                var newRect = GUILayout.Window(WindowId, SettingWindowRect, SettingsWindow, "Plugin / mod settings");
+
+                if (newRect != SettingWindowRect)
+                {
+                    _windowWasMoved = true;
+                    SettingWindowRect = newRect;
+
+                    _tipsWindowWasMoved = true;
+                }
+
+                if (!SettingFieldDrawer.SettingKeyboardShortcut && (!_windowWasMoved || SettingWindowRect.Contains(UnityInput.Current.mousePosition)))
+                    UnityInput.Current.ResetInputAxes();
+            }
+        }
+
+        private static void DrawTooltip(Rect area)
+        {
+            if (!string.IsNullOrEmpty(GUI.tooltip))
+            {
+                var currentEvent = Event.current;
+
+                var style = new GUIStyle
+                {
+                    normal = new GUIStyleState { textColor = Color.white, background = TooltipBg },
+                    wordWrap = true,
