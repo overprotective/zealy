@@ -355,3 +355,55 @@ namespace ConfigurationManager
                         }
                         catch (ArgumentException)
                         {
+                            // Needed to avoid GUILayout: Mismatched LayoutGroup.Repaint crashes on large lists
+                        }
+
+                        if (plugin.Height == 0 && Event.current.type == EventType.Repaint)
+                            plugin.Height = (int)GUILayoutUtility.GetLastRect().height;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            GUILayout.Space(plugin.Height);
+                        }
+                        catch (ArgumentException)
+                        {
+                            // Needed to avoid GUILayout: Mismatched LayoutGroup.Repaint crashes on large lists
+                        }
+                    }
+
+                    currentHeight += plugin.Height;
+                }
+
+                if (_showDebug)
+                {
+                    GUILayout.Space(10);
+                    GUILayout.Label("Plugins with no options available: " + _modsWithoutSettings);
+                }
+                else
+                {
+                    // Always leave some space in case there's a dropdown box at the very bottom of the list
+                    GUILayout.Space(70);
+                }
+            }
+            GUILayout.EndVertical();
+            GUILayout.EndScrollView();
+
+            if (!SettingFieldDrawer.DrawCurrentDropdown())
+                DrawTooltip(SettingWindowRect);
+
+            GUI.DragWindow();
+        }
+
+        private void DrawTips()
+        {
+            var tip = !_tipsPluginHeaderWasClicked ? "Tip: Click plugin names to expand. Click setting and group names to see their descriptions." :
+                !_tipsWindowWasMoved ? "Tip: You can drag this window to move it. It will stay open while you interact with the game." : null;
+
+            if (tip != null)
+            {
+                GUILayout.BeginHorizontal();
+                {
+                    GUILayout.Label(tip);
+                }
