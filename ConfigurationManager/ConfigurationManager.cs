@@ -689,3 +689,31 @@ namespace ConfigurationManager
 
                 _curVisible.SetValue(null, cursorVisible, null);
             }
+        }
+
+        private sealed class PluginSettingsData
+        {
+            public BepInPlugin Info;
+            public List<PluginSettingsGroupData> Categories;
+            public int Height;
+            public string Website;
+
+            private bool _collapsed;
+            public bool Collapsed
+            {
+                get => _collapsed;
+                set
+                {
+                    _collapsed = value;
+                    Height = 0;
+                }
+            }
+
+            public sealed class PluginSettingsGroupData
+            {
+                public string Name;
+                public List<SettingEntryBase> Settings;
+            }
+        }
+    }
+}
