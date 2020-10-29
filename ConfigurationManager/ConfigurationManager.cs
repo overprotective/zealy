@@ -600,3 +600,49 @@ namespace ConfigurationManager
 
             var origColor = GUI.color;
             if (setting.IsAdvanced == true)
+                GUI.color = _advancedSettingColor;
+
+            GUILayout.Label(new GUIContent(setting.DispName.TrimStart('!'), setting.Description),
+                GUILayout.Width(LeftColumnWidth), GUILayout.MaxWidth(LeftColumnWidth));
+
+            GUI.color = origColor;
+        }
+
+        private static void DrawDefaultButton(SettingEntryBase setting)
+        {
+            if (setting.HideDefaultButton) return;
+
+            bool DefaultButton()
+            {
+                GUILayout.Space(5);
+                return GUILayout.Button("Reset", GUILayout.ExpandWidth(false));
+            }
+
+            if (setting.DefaultValue != null)
+            {
+                if (DefaultButton())
+                    setting.Set(setting.DefaultValue);
+            }
+            else if (setting.SettingType.IsClass)
+            {
+                if (DefaultButton())
+                    setting.Set(null);
+            }
+        }
+
+        private void Start()
+        {
+            var background = new Texture2D(1, 1, TextureFormat.ARGB32, false);
+            background.SetPixel(0, 0, Color.black);
+            background.Apply();
+            TooltipBg = background;
+
+            var windowBackground = new Texture2D(1, 1, TextureFormat.ARGB32, false);
+            windowBackground.SetPixel(0, 0, new Color(0.5f, 0.5f, 0.5f, 1));
+            windowBackground.Apply();
+            WindowBackground = windowBackground;
+
+            // Use reflection to keep compatibility with unity 4.x since it doesn't have Cursor
+            var tCursor = typeof(Cursor);
+            _curLockState = tCursor.GetProperty("lockState", BindingFlags.Static | BindingFlags.Public);
+            _curVisible = tCursor.GetProperty("visible", BindingFlags.Static | BindingFlags.Public);
