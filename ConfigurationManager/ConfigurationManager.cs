@@ -646,3 +646,46 @@ namespace ConfigurationManager
             var tCursor = typeof(Cursor);
             _curLockState = tCursor.GetProperty("lockState", BindingFlags.Static | BindingFlags.Public);
             _curVisible = tCursor.GetProperty("visible", BindingFlags.Static | BindingFlags.Public);
+
+            if (_curLockState == null && _curVisible == null)
+            {
+                _obsoleteCursor = true;
+
+                _curLockState = typeof(Screen).GetProperty("lockCursor", BindingFlags.Static | BindingFlags.Public);
+                _curVisible = typeof(Screen).GetProperty("showCursor", BindingFlags.Static | BindingFlags.Public);
+            }
+
+            // Check if user has permissions to write config files to disk
+            try { Config.Save(); }
+            catch (IOException ex) { Logger.Log(LogLevel.Message | LogLevel.Warning, "WARNING: Failed to write to config directory, expect issues!\nError message:" + ex.Message); }
+            catch (UnauthorizedAccessException ex) { Logger.Log(LogLevel.Message | LogLevel.Warning, "WARNING: Permission denied to write to config directory, expect issues!\nError message:" + ex.Message); }
+        }
+
+        private void Update()
+        {
+            if (DisplayingWindow) SetUnlockCursor(0, true);
+
+            if (OverrideHotkey) return;
+
+            if (_keybind.Value.IsDown()) DisplayingWindow = !DisplayingWindow;
+        }
+
+        private void LateUpdate()
+        {
+            if (DisplayingWindow) SetUnlockCursor(0, true);
+        }
+
+        private void SetUnlockCursor(int lockState, bool cursorVisible)
+        {
+            if (_curLockState != null)
+            {
+                // Do through reflection for unity 4 compat
+                //Cursor.lockState = CursorLockMode.None;
+                //Cursor.visible = true;
+                if (_obsoleteCursor)
+                    _curLockState.SetValue(null, Convert.ToBoolean(lockState), null);
+                else
+                    _curLockState.SetValue(null, lockState, null);
+
+                _curVisible.SetValue(null, cursorVisible, null);
+            }
