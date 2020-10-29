@@ -549,3 +549,54 @@ namespace ConfigurationManager
                     GUI.color = Color.gray;
                     if (GUILayout.Button(new GUIContent("URL", plugin.Website), GUI.skin.label, GUILayout.ExpandWidth(false)))
                         Utils.OpenWebsite(plugin.Website);
+                    GUI.color = origColor;
+                    GUILayout.EndHorizontal();
+                }
+            }
+
+            if (isSearching || !plugin.Collapsed)
+            {
+                foreach (var category in plugin.Categories)
+                {
+                    if (!string.IsNullOrEmpty(category.Name))
+                    {
+                        if (plugin.Categories.Count > 1 || !_hideSingleSection.Value)
+                            SettingFieldDrawer.DrawCategoryHeader(category.Name);
+                    }
+
+                    foreach (var setting in category.Settings)
+                    {
+                        DrawSingleSetting(setting);
+                        GUILayout.Space(2);
+                    }
+                }
+            }
+
+            GUILayout.EndVertical();
+        }
+
+        private void DrawSingleSetting(SettingEntryBase setting)
+        {
+            GUILayout.BeginHorizontal();
+            {
+                try
+                {
+                    DrawSettingName(setting);
+                    _fieldDrawer.DrawSettingValue(setting);
+                    DrawDefaultButton(setting);
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log(LogLevel.Error, $"Failed to draw setting {setting.DispName} - {ex}");
+                    GUILayout.Label("Failed to draw this field, check log for details.");
+                }
+            }
+            GUILayout.EndHorizontal();
+        }
+
+        private void DrawSettingName(SettingEntryBase setting)
+        {
+            if (setting.HideSettingName) return;
+
+            var origColor = GUI.color;
+            if (setting.IsAdvanced == true)
