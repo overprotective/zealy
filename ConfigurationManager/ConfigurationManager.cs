@@ -407,3 +407,51 @@ namespace ConfigurationManager
                 {
                     GUILayout.Label(tip);
                 }
+                GUILayout.EndHorizontal();
+            }
+        }
+
+        private void DrawWindowHeader()
+        {
+            GUILayout.BeginHorizontal(GUI.skin.box);
+            {
+                GUI.enabled = SearchString == string.Empty;
+
+                var newVal = GUILayout.Toggle(_showSettings.Value, "Normal settings");
+                if (_showSettings.Value != newVal)
+                {
+                    _showSettings.Value = newVal;
+                    BuildFilteredSettingList();
+                }
+
+                newVal = GUILayout.Toggle(_showKeybinds.Value, "Keyboard shortcuts");
+                if (_showKeybinds.Value != newVal)
+                {
+                    _showKeybinds.Value = newVal;
+                    BuildFilteredSettingList();
+                }
+
+                var origColor = GUI.color;
+                GUI.color = _advancedSettingColor;
+                newVal = GUILayout.Toggle(_showAdvanced.Value, "Advanced settings");
+                if (_showAdvanced.Value != newVal)
+                {
+                    _showAdvanced.Value = newVal;
+                    BuildFilteredSettingList();
+                }
+                GUI.color = origColor;
+
+                GUI.enabled = true;
+
+                GUILayout.Space(8);
+
+                newVal = GUILayout.Toggle(_showDebug, "Debug info");
+                if (_showDebug != newVal)
+                {
+                    _showDebug = newVal;
+                    BuildSettingList();
+                }
+
+                if (GUILayout.Button("Open Log"))
+                {
+                    try { Utils.OpenLog(); }
