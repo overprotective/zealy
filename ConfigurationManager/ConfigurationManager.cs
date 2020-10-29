@@ -504,3 +504,48 @@ namespace ConfigurationManager
         /// </summary>
         public string SearchString
         {
+            get => _searchString;
+            private set
+            {
+                if (value == null)
+                    value = string.Empty;
+
+                if (_searchString == value)
+                    return;
+
+                _searchString = value;
+
+                BuildFilteredSettingList();
+            }
+        }
+
+        private void DrawSinglePlugin(PluginSettingsData plugin)
+        {
+            GUILayout.BeginVertical(GUI.skin.box);
+
+            var categoryHeader = _showDebug ?
+                new GUIContent($"{plugin.Info.Name.TrimStart('!')} {plugin.Info.Version}", "GUID: " + plugin.Info.GUID) :
+                new GUIContent($"{plugin.Info.Name.TrimStart('!')} {plugin.Info.Version}");
+
+            var isSearching = !string.IsNullOrEmpty(SearchString);
+
+            {
+                var hasWebsite = plugin.Website != null;
+                if (hasWebsite)
+                {
+                    GUILayout.BeginHorizontal();
+                    GUILayout.Space(29); // Same as the URL button to keep the plugin name centered
+                }
+
+                if (SettingFieldDrawer.DrawPluginHeader(categoryHeader, plugin.Collapsed && !isSearching) && !isSearching)
+                {
+                    _tipsPluginHeaderWasClicked = true;
+                    plugin.Collapsed = !plugin.Collapsed;
+                }
+
+                if (hasWebsite)
+                {
+                    var origColor = GUI.color;
+                    GUI.color = Color.gray;
+                    if (GUILayout.Button(new GUIContent("URL", plugin.Website), GUI.skin.label, GUILayout.ExpandWidth(false)))
+                        Utils.OpenWebsite(plugin.Website);
