@@ -455,3 +455,52 @@ namespace ConfigurationManager
                 if (GUILayout.Button("Open Log"))
                 {
                     try { Utils.OpenLog(); }
+                    catch (SystemException ex) { Logger.Log(LogLevel.Message | LogLevel.Error, ex.Message); }
+                }
+
+                GUILayout.Space(8);
+
+                if (GUILayout.Button("Close"))
+                {
+                    DisplayingWindow = false;
+                }
+            }
+            GUILayout.EndHorizontal();
+
+            GUILayout.BeginHorizontal(GUI.skin.box);
+            {
+                GUILayout.Label("Search: ", GUILayout.ExpandWidth(false));
+
+                GUI.SetNextControlName(SearchBoxName);
+                SearchString = GUILayout.TextField(SearchString, GUILayout.ExpandWidth(true));
+
+                if (_focusSearchBox)
+                {
+                    GUI.FocusWindow(WindowId);
+                    GUI.FocusControl(SearchBoxName);
+                    _focusSearchBox = false;
+                }
+
+                if (GUILayout.Button("Clear", GUILayout.ExpandWidth(false)))
+                    SearchString = string.Empty;
+
+                GUILayout.Space(8);
+
+                if (GUILayout.Button(_pluginConfigCollapsedDefault.Value ? "Expand All" : "Collapse All", GUILayout.ExpandWidth(false)))
+                {
+                    var newValue = !_pluginConfigCollapsedDefault.Value;
+                    _pluginConfigCollapsedDefault.Value = newValue;
+                    foreach (var plugin in _filteredSetings)
+                        plugin.Collapsed = newValue;
+
+                    _tipsPluginHeaderWasClicked = true;
+                }
+            }
+            GUILayout.EndHorizontal();
+        }
+
+        /// <summary>
+        /// String currently entered into the search box
+        /// </summary>
+        public string SearchString
+        {
