@@ -4,4 +4,5 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{22
+    <ProjectGuid>{22EDD399-1CC6-47C8-B8B8-A95FF2999901}</ProjectGuid>
+ 
