@@ -8,4 +8,5 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConfigurationManager</RootNamespace>
-    <AssemblyName>ConfigurationMana
+    <AssemblyName>ConfigurationManager</AssemblyName>
+    <TargetFrameworkVersion>v
