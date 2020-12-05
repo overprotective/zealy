@@ -9,4 +9,5 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConfigurationManager</RootNamespace>
     <AssemblyName>ConfigurationManager</AssemblyName>
-    <TargetFrameworkVersion>v
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignmen
