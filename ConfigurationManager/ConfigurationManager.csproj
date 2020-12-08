@@ -12,4 +12,5 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
- 
+    </NuGetPackageImportStamp>
+  </PropertyGr
