@@ -10,4 +10,6 @@
     <RootNamespace>ConfigurationManager</RootNamespace>
     <AssemblyName>ConfigurationManager</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignmen
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+ 
