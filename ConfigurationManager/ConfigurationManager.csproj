@@ -15,4 +15,5 @@
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <Debug
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</Debug
