@@ -18,4 +18,5 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>embedded</DebugType>
     <Optimize>false</Optimize>
-    <OutputP
+    <OutputPath>..\bin\BepInEx\plugins\</OutputPath>
+    <DefineConstants
