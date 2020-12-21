@@ -20,4 +20,5 @@
     <Optimize>false</Optimize>
     <OutputPath>..\bin\BepInEx\plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <Er
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4
