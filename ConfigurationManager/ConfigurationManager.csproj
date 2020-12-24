@@ -21,4 +21,6 @@
     <OutputPath>..\bin\BepInEx\plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup C
