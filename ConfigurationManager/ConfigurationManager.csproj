@@ -26,4 +26,5 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>embedded</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\bin\
+    <OutputPath>..\bin\BepInEx\plugins\</OutputPath>
+    <DefineC
