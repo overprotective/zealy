@@ -27,4 +27,5 @@
     <DebugType>embedded</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\bin\BepInEx\plugins\</OutputPath>
-    <DefineC
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</Error
