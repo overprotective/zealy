@@ -25,3 +25,5 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>embedded</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\
