@@ -28,4 +28,6 @@
     <Optimize>true</Optimize>
     <OutputPath>..\bin\BepInEx\plugins\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</Error
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+ 
