@@ -31,4 +31,4 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DebugSymbols>true</DebugSymbols>
-    <Docu
+    <DocumentationFile>..\bin\BepInEx\plugins\ConfigurationMana
