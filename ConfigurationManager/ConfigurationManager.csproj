@@ -33,4 +33,5 @@
     <DebugSymbols>true</DebugSymbols>
     <DocumentationFile>..\bin\BepInEx\plugins\ConfigurationManager.xml</DocumentationFile>
   </PropertyGroup>
-  
+  <ItemGroup>
+    <Reference Include="BepInEx
