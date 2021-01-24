@@ -34,4 +34,4 @@
     <DocumentationFile>..\bin\BepInEx\plugins\ConfigurationManager.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BepInEx
+    <Reference Include="BepInEx, Version=5.4.20.0, Culture=neutral, processorArchitect
