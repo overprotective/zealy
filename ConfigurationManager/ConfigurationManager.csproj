@@ -35,4 +35,5 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BepInEx, Version=5.4.20.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BepInEx.BaseLib.5.4
+      <HintPath>..\packages\BepInEx.BaseLib.5.4.20\lib\net35\BepInEx.dll</HintPath>
+      <Private>
