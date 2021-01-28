@@ -38,4 +38,6 @@
       <HintPath>..\packages\BepInEx.BaseLib.5.4.20\lib\net35\BepInEx.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include=
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+   
