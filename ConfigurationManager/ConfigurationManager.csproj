@@ -51,4 +51,5 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigSettingEntry.cs" />
-    <Compile Include="P
+    <Compile Include="PropertySettingEntry.cs" />
+    <Compile Include
