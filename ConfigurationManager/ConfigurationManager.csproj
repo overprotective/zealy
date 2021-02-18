@@ -50,4 +50,5 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Co
+    <Compile Include="ConfigSettingEntry.cs" />
+    <Compile Include="P
