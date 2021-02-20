@@ -52,4 +52,5 @@
   <ItemGroup>
     <Compile Include="ConfigSettingEntry.cs" />
     <Compile Include="PropertySettingEntry.cs" />
-    <Compile Include
+    <Compile Include="SettingSearcher.cs" />
+    <Compile Incl
