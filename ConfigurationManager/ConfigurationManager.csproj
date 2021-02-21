@@ -53,4 +53,5 @@
     <Compile Include="ConfigSettingEntry.cs" />
     <Compile Include="PropertySettingEntry.cs" />
     <Compile Include="SettingSearcher.cs" />
-    <Compile Incl
+    <Compile Include="Utilities\ComboBox.cs" />
+    <Compile 
