@@ -56,4 +56,5 @@
     <Compile Include="Utilities\ComboBox.cs" />
     <Compile Include="ConfigurationManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    
+    <Compile Include="SettingEntryBase.cs" />
+    <Compile 
