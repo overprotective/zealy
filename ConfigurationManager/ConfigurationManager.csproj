@@ -57,4 +57,5 @@
     <Compile Include="ConfigurationManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingEntryBase.cs" />
-    <Compile 
+    <Compile Include="SettingFieldDrawer.cs" />
+    <Compile Incl
