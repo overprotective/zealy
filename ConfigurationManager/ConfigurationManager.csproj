@@ -58,4 +58,5 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingEntryBase.cs" />
     <Compile Include="SettingFieldDrawer.cs" />
-    <Compile Incl
+    <Compile Include="Utilities\Utilities.cs" />
+    <Compile Include="
