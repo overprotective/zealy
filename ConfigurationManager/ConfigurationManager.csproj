@@ -59,4 +59,6 @@
     <Compile Include="SettingEntryBase.cs" />
     <Compile Include="SettingFieldDrawer.cs" />
     <Compile Include="Utilities\Utilities.cs" />
-    <Compile Include="
+    <Compile Include="ValueChangedEventArgs.cs" />
+  </ItemGroup>
+ 
