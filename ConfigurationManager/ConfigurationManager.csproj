@@ -62,4 +62,7 @@
     <Compile Include="ValueChangedEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Ana
