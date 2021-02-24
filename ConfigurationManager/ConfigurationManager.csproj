@@ -61,4 +61,5 @@
     <Compile Include="Utilities\Utilities.cs" />
     <Compile Include="ValueChangedEventArgs.cs" />
   </ItemGroup>
- 
+  <ItemGroup>
+    <None Include="packages
