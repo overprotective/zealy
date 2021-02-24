@@ -65,4 +65,4 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Ana
+    <Analyzer Include="..\packages\BepInEx.Analyzers.1.0.8\anal
