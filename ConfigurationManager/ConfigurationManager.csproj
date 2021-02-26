@@ -68,4 +68,5 @@
     <Analyzer Include="..\packages\BepInEx.Analyzers.1.0.8\analyzers\dotnet\cs\BepInEx.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\BepInEx.Analyzers.1.0.8\analyzers\dotnet\cs\BepInEx.Analyzers.dll" />
   </ItemGroup>
-  <Import Project="$
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Pr
