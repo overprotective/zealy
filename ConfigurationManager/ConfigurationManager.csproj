@@ -70,4 +70,4 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>IF EXIST $(
+    <PostBuildEvent>IF EXIST $(SolutionDir)PostBuild.bat CALL "$(Solutio
