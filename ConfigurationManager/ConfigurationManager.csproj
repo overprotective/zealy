@@ -72,4 +72,4 @@
   <PropertyGroup>
     <PostBuildEvent>IF EXIST $(SolutionDir)PostBuild.bat CALL "$(SolutionDir)PostBuild.bat" $(TargetPath) KK
 IF EXIST $(SolutionDir)PostBuild.bat CALL "$(SolutionDir)PostBuild.bat" $(TargetPath) EC
-IF EXIST $(S
+IF EXIST $(SolutionDir)PostBuild.bat CALL "$(SolutionDir)Post
