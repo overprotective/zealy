@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>BepInE
+    <id>BepInEx.ConfigurationManager</id>
+    <version>$version$</ver
