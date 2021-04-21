@@ -2,4 +2,6 @@
 <package >
   <metadata>
     <id>BepInEx.ConfigurationManager</id>
-    <version>$version$</ver
+    <version>$version$</version>
+    <authors>ManlyMarco</authors>
+    <pro
