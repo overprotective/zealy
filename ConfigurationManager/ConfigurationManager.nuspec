@@ -4,4 +4,5 @@
     <id>BepInEx.ConfigurationManager</id>
     <version>$version$</version>
     <authors>ManlyMarco</authors>
-    <projectUrl>https://github.com/BepInEx/BepInEx
+    <projectUrl>https://github.com/BepInEx/BepInEx.ConfigurationManager</projectUrl>
+    <requi
