@@ -6,3 +6,4 @@
     <authors>ManlyMarco</authors>
     <projectUrl>https://github.com/BepInEx/BepInEx.ConfigurationManager</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Plugin configuration manager for
