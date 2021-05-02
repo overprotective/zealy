@@ -10,4 +10,6 @@
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="install.
+    <file src="install.ps1" target="tools" />
+  </files>
+</package>
