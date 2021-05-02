@@ -8,4 +8,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Plugin configuration manager for BepInEx</description>
     <developmentDependency>true</developmentDependency>
-  </metad
+  </metadata>
+  <files>
+    <file src="install.
