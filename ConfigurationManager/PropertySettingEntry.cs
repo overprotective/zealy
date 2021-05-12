@@ -6,4 +6,6 @@ namespace ConfigurationManager
 {
     internal class PropertySettingEntry : SettingEntryBase
     {
-        private Type _sett
+        private Type _settingType;
+
+        public PropertySettingEntry(o
