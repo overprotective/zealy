@@ -8,4 +8,6 @@ namespace ConfigurationManager
     {
         private Type _settingType;
 
-        public PropertySettingEntry(object instance, PropertyInfo settingProp, BaseUnit
+        public PropertySettingEntry(object instance, PropertyInfo settingProp, BaseUnityPlugin pluginInstance)
+        {
+          
