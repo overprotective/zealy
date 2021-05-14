@@ -8,4 +8,4 @@ namespace ConfigurationManager
     {
         private Type _settingType;
 
-        public PropertySettingEntry(o
+        public PropertySettingEntry(object instance, PropertyInfo settingProp, BaseUnit
