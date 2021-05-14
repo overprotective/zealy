@@ -10,4 +10,4 @@ namespace ConfigurationManager
 
         public PropertySettingEntry(object instance, PropertyInfo settingProp, BaseUnityPlugin pluginInstance)
         {
-          
+            SetFromAttributes(settingProp.GetCustomAttribute
