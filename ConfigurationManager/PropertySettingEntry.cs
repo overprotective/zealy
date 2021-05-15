@@ -12,4 +12,6 @@ namespace ConfigurationManager
         {
             SetFromAttributes(settingProp.GetCustomAttributes(false), pluginInstance);
             if (Browsable == null) Browsable = settingProp.CanRead && settingProp.CanWrite;
-            ReadOnly = settingProp.CanWr
+            ReadOnly = settingProp.CanWrite;
+            Property = settingProp;
+          
