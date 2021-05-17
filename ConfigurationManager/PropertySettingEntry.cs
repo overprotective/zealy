@@ -14,4 +14,7 @@ namespace ConfigurationManager
             if (Browsable == null) Browsable = settingProp.CanRead && settingProp.CanWrite;
             ReadOnly = settingProp.CanWrite;
             Property = settingProp;
-          
+            Instance = instance;
+        }
+
+        publi
