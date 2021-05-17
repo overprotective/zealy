@@ -17,4 +17,5 @@ namespace ConfigurationManager
             Instance = instance;
         }
 
-        publi
+        public object Instance { get; internal set; }
+        public P
