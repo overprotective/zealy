@@ -18,4 +18,6 @@ namespace ConfigurationManager
         }
 
         public object Instance { get; internal set; }
-        public P
+        public PropertyInfo Property { get; internal set; }
+
+      
