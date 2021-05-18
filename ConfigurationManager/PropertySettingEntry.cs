@@ -20,4 +20,6 @@ namespace ConfigurationManager
         public object Instance { get; internal set; }
         public PropertyInfo Property { get; internal set; }
 
-      
+        public override string DispName
+        {
+    
