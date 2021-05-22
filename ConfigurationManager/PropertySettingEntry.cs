@@ -22,4 +22,4 @@ namespace ConfigurationManager
 
         public override string DispName
         {
-    
+            get => string.IsNullOrEmpty(base.
