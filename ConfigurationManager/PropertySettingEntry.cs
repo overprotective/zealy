@@ -22,4 +22,5 @@ namespace ConfigurationManager
 
         public override string DispName
         {
-            get => string.IsNullOrEmpty(base.
+            get => string.IsNullOrEmpty(base.DispName) ? Property.Name : base.DispName;
+       
