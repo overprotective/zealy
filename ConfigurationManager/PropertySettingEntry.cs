@@ -24,3 +24,5 @@ namespace ConfigurationManager
         {
             get => string.IsNullOrEmpty(base.DispName) ? Property.Name : base.DispName;
             protected internal set => base.DispName = value;
+        }
+        public override Type Setti
