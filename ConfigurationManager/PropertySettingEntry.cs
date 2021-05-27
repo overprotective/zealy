@@ -26,4 +26,5 @@ namespace ConfigurationManager
             protected internal set => base.DispName = value;
         }
         public override Type SettingType => _settingType ?? (_settingType = Property.PropertyType);
-        public override object Ge
+        public override object Get() => Property.GetValue(Instance, null);
+        pro
