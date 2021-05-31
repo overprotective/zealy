@@ -27,4 +27,6 @@ namespace ConfigurationManager
         }
         public override Type SettingType => _settingType ?? (_settingType = Property.PropertyType);
         public override object Get() => Property.GetValue(Instance, null);
-        protected override void SetValue(object newVal) => Propert
+        protected override void SetValue(object newVal) => Property.SetValue(Instance, newVal, null);
+    }
+}
