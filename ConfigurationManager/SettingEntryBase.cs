@@ -100,3 +100,52 @@ namespace ConfigurationManager
         /// Type of the variable
         /// </summary>
         public abstract Type SettingType { get; }
+
+        /// <summary>
+        /// Instance of the plugin that owns this setting
+        /// </summary>
+        public BaseUnityPlugin PluginInstance { get; private set; }
+
+        /// <summary>
+        /// Is this setting advanced
+        /// </summary>
+        public bool? IsAdvanced { get; internal set; }
+
+        /// <summary>
+        /// Order of the setting on the settings list relative to other settings in a category. 0 by default, lower is higher on the list.
+        /// </summary>
+        public int Order { get; protected set; }
+
+        /// <summary>
+        /// Get the value of this setting
+        /// </summary>
+        public abstract object Get();
+
+        /// <summary>
+        /// Set the value of this setting
+        /// </summary>
+        public void Set(object newVal)
+        {
+            if (ReadOnly != true)
+                SetValue(newVal);
+        }
+
+        /// <summary>
+        /// Implementation of <see cref="Set"/>
+        /// </summary>
+        protected abstract void SetValue(object newVal);
+
+        /// <summary>
+        /// Custom converter from setting type to string for the textbox
+        /// </summary>
+        public Func<object, string> ObjToStr { get; internal set; }
+
+        /// <summary>
+        /// Custom converter from string to setting type for the textbox
+        /// </summary>
+        public Func<string, object> StrToObj { get; internal set; }
+
+        private static readonly PropertyInfo[] _myProperties = typeof(SettingEntryBase).GetProperties(BindingFlags.Instance | BindingFlags.Public);
+
+        internal void SetFromAttributes(object[] attribs, BaseUnityPlugin pluginInstance)
+        {
