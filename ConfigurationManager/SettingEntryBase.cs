@@ -199,3 +199,29 @@ namespace ConfigurationManager
                         {
                             var otherFields = attrType.GetFields(BindingFlags.Instance | BindingFlags.Public);
                             foreach (var propertyPair in _myProperties.Join(otherFields, my => my.Name, other => other.Name, (my, other) => new { my, other }))
+                            {
+                                try
+                                {
+                                    var val = propertyPair.other.GetValue(attrib);
+                                    if (val != null)
+                                    {
+                                        // Handle delegate covariance not working when using reflection by manually converting the delegate
+                                        if (propertyPair.my.PropertyType != propertyPair.other.FieldType && typeof(Delegate).IsAssignableFrom(propertyPair.my.PropertyType))
+                                            val = Delegate.CreateDelegate(propertyPair.my.PropertyType, ((Delegate)val).Target, ((Delegate)val).Method);
+
+                                        propertyPair.my.SetValue(this, val, null);
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    ConfigurationManager.Logger.LogWarning($"Failed to copy value {propertyPair.my.Name} from provided tag object {attrType.FullName} - " + ex.Message);
+                                }
+                            }
+                            break;
+                        }
+                        return;
+                }
+            }
+        }
+    }
+}
