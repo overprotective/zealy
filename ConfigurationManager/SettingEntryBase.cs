@@ -149,3 +149,53 @@ namespace ConfigurationManager
 
         internal void SetFromAttributes(object[] attribs, BaseUnityPlugin pluginInstance)
         {
+            PluginInstance = pluginInstance;
+            PluginInfo = pluginInstance?.Info.Metadata;
+
+            if (attribs == null || attribs.Length == 0) return;
+
+            foreach (var attrib in attribs)
+            {
+                switch (attrib)
+                {
+                    case null: break;
+
+                    case DisplayNameAttribute da:
+                        DispName = da.DisplayName;
+                        break;
+                    case CategoryAttribute ca:
+                        Category = ca.Category;
+                        break;
+                    case DescriptionAttribute de:
+                        Description = de.Description;
+                        break;
+                    case DefaultValueAttribute def:
+                        DefaultValue = def.Value;
+                        break;
+                    case ReadOnlyAttribute ro:
+                        ReadOnly = ro.IsReadOnly;
+                        break;
+                    case BrowsableAttribute bro:
+                        Browsable = bro.Browsable;
+                        break;
+
+                    case Action<SettingEntryBase> newCustomDraw:
+                        CustomDrawer = _ => newCustomDraw(this);
+                        break;
+                    case string str:
+                        switch (str)
+                        {
+                            case "ReadOnly": ReadOnly = true; break;
+                            case "Browsable": Browsable = true; break;
+                            case "Unbrowsable": case "Hidden": Browsable = false; break;
+                            case "Advanced": IsAdvanced = true; break;
+                        }
+                        break;
+
+                    // Copy attributes from a specially formatted object, currently recommended
+                    default:
+                        var attrType = attrib.GetType();
+                        if (attrType.Name == "ConfigurationManagerAttributes")
+                        {
+                            var otherFields = attrType.GetFields(BindingFlags.Instance | BindingFlags.Public);
+                            foreach (var propertyPair in _myProperties.Join(otherFields, my => my.Name, other => other.Name, (my, other) => new { my, other }))
