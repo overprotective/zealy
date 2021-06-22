@@ -9,4 +9,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using BepInEx;
-using 
+using UnityEngine;
+
+namespace ConfigurationManager
+{
