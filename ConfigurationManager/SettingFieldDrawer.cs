@@ -13,3 +13,4 @@ using UnityEngine;
 
 namespace ConfigurationManager
 {
+    internal class SettingField
