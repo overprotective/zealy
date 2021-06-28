@@ -17,4 +17,4 @@ namespace ConfigurationManager
     {
         private static IEnumerable<KeyCode> _keysToCheck;
 
-        public st
+        public static Dictionary<Type, Action<SettingEntryBa
