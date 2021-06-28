@@ -13,4 +13,6 @@ using UnityEngine;
 
 namespace ConfigurationManager
 {
-    internal class SettingField
+    internal class SettingFieldDrawer
+    {
+        private static IEnumerab
