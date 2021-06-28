@@ -15,4 +15,6 @@ namespace ConfigurationManager
 {
     internal class SettingFieldDrawer
     {
-        private static IEnumerab
+        private static IEnumerable<KeyCode> _keysToCheck;
+
+        public st
