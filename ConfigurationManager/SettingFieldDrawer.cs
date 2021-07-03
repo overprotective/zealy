@@ -19,4 +19,4 @@ namespace ConfigurationManager
 
         public static Dictionary<Type, Action<SettingEntryBase>> SettingDrawHandlers { get; }
 
-        private static readonly Dictionary<SettingEntryBase, ComboBox> _comboB
+        private static readonly Dictionary<SettingEntryBase, ComboBox> _comboBoxCache = new Dictionary<SettingEntryBase, ComboBo
