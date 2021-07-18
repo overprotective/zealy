@@ -24,4 +24,5 @@ namespace ConfigurationManager
 
         private static ConfigurationManager _instance;
 
-        private static SettingEntryBase _curren
+        private static SettingEntryBase _currentKeyboardShortcutToSet;
+        public stati
