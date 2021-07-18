@@ -22,4 +22,4 @@ namespace ConfigurationManager
         private static readonly Dictionary<SettingEntryBase, ComboBox> _comboBoxCache = new Dictionary<SettingEntryBase, ComboBox>();
         private static readonly Dictionary<SettingEntryBase, ColorCacheEntry> _colorCache = new Dictionary<SettingEntryBase, ColorCacheEntry>();
 
-        private
+        private static ConfigurationManager _instance
