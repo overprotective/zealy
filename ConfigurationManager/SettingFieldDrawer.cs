@@ -25,4 +25,4 @@ namespace ConfigurationManager
         private static ConfigurationManager _instance;
 
         private static SettingEntryBase _currentKeyboardShortcutToSet;
-        public stati
+        public static bool SettingKeyboardShortcut => _currentKeyboardShortcutT
