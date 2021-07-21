@@ -27,4 +27,6 @@ namespace ConfigurationManager
         private static SettingEntryBase _currentKeyboardShortcutToSet;
         public static bool SettingKeyboardShortcut => _currentKeyboardShortcutToSet != null;
 
-        static Settin
+        static SettingFieldDrawer()
+        {
+            SettingDrawHand
