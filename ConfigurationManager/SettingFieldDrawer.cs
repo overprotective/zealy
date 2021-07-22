@@ -29,4 +29,4 @@ namespace ConfigurationManager
 
         static SettingFieldDrawer()
         {
-            SettingDrawHand
+            SettingDrawHandlers = new Dictionary<Type, Action<SettingEntryBase>>
