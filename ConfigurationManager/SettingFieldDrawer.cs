@@ -30,3 +30,5 @@ namespace ConfigurationManager
         static SettingFieldDrawer()
         {
             SettingDrawHandlers = new Dictionary<Type, Action<SettingEntryBase>>
+            {
+                {typeof(bool), DrawBoolF
