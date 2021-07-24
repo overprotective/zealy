@@ -32,4 +32,5 @@ namespace ConfigurationManager
             SettingDrawHandlers = new Dictionary<Type, Action<SettingEntryBase>>
             {
                 {typeof(bool), DrawBoolField},
-                {typeof(BepInEx.Config
+                {typeof(BepInEx.Configuration.KeyboardShortcut), DrawKeyboardShortcut},
+           
