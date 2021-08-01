@@ -34,4 +34,5 @@ namespace ConfigurationManager
                 {typeof(bool), DrawBoolField},
                 {typeof(BepInEx.Configuration.KeyboardShortcut), DrawKeyboardShortcut},
                 {typeof(KeyCode), DrawKeyCode },
-          
+                {typeof(Color), DrawColor },
+           
