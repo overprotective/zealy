@@ -35,4 +35,5 @@ namespace ConfigurationManager
                 {typeof(BepInEx.Configuration.KeyboardShortcut), DrawKeyboardShortcut},
                 {typeof(KeyCode), DrawKeyCode },
                 {typeof(Color), DrawColor },
-           
+                {typeof(Vector2), DrawVector2 },
+                {typ
