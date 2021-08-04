@@ -37,4 +37,4 @@ namespace ConfigurationManager
                 {typeof(Color), DrawColor },
                 {typeof(Vector2), DrawVector2 },
                 {typeof(Vector3), DrawVector3 },
-          
+                {typeof(Vector4), DrawVector4 },
