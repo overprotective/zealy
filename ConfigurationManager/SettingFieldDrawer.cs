@@ -44,4 +44,7 @@ namespace ConfigurationManager
 
         public SettingFieldDrawer(ConfigurationManager instance)
         {
-            _instance = instan
+            _instance = instance;
+        }
+
+        public void DrawSetting
