@@ -42,4 +42,4 @@ namespace ConfigurationManager
             };
         }
 
-        p
+        public SettingFieldDrawer(ConfigurationManager i
