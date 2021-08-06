@@ -42,4 +42,6 @@ namespace ConfigurationManager
             };
         }
 
-        public SettingFieldDrawer(ConfigurationManager i
+        public SettingFieldDrawer(ConfigurationManager instance)
+        {
+            _instance = instan
