@@ -47,4 +47,6 @@ namespace ConfigurationManager
             _instance = instance;
         }
 
-        public void DrawSetting
+        public void DrawSettingValue(SettingEntryBase setting)
+        {
+  
