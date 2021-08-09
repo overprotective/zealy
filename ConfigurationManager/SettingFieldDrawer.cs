@@ -49,4 +49,4 @@ namespace ConfigurationManager
 
         public void DrawSettingValue(SettingEntryBase setting)
         {
-  
+            if (setting.CustomDrawer != null)
