@@ -51,4 +51,6 @@ namespace ConfigurationManager
         {
             if (setting.CustomDrawer != null)
                 setting.CustomDrawer(setting is ConfigSettingEntry newSetting ? newSetting.Entry : null);
-            else if (setting.Custom
+            else if (setting.CustomHotkeyDrawer != null)
+            {
+             
