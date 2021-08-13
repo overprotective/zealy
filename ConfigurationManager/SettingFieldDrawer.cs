@@ -50,4 +50,5 @@ namespace ConfigurationManager
         public void DrawSettingValue(SettingEntryBase setting)
         {
             if (setting.CustomDrawer != null)
-                setting.CustomDrawer(setting is ConfigSettingEntry newSetting ? newSetting.En
+                setting.CustomDrawer(setting is ConfigSettingEntry newSetting ? newSetting.Entry : null);
+            else if (setting.Custom
