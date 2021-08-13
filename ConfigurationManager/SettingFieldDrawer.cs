@@ -53,4 +53,4 @@ namespace ConfigurationManager
                 setting.CustomDrawer(setting is ConfigSettingEntry newSetting ? newSetting.Entry : null);
             else if (setting.CustomHotkeyDrawer != null)
             {
-             
+                var isBeingSet = _currentKeyboardShor
