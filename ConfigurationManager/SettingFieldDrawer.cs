@@ -56,4 +56,4 @@ namespace ConfigurationManager
                 var isBeingSet = _currentKeyboardShortcutToSet == setting;
                 var isBeingSetOriginal = isBeingSet;
 
-                settin
+                setting.CustomHotkeyDrawer(setting is ConfigSettingEntry
