@@ -58,4 +58,5 @@ namespace ConfigurationManager
 
                 setting.CustomHotkeyDrawer(setting is ConfigSettingEntry newSetting ? newSetting.Entry : null, ref isBeingSet);
 
-                if (isBei
+                if (isBeingSet != isBeingSetOriginal)
+                 
