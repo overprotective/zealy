@@ -59,4 +59,6 @@ namespace ConfigurationManager
                 setting.CustomHotkeyDrawer(setting is ConfigSettingEntry newSetting ? newSetting.Entry : null, ref isBeingSet);
 
                 if (isBeingSet != isBeingSetOriginal)
-                    _currentKeyboardShortcutToSet = isBeingS
+                    _currentKeyboardShortcutToSet = isBeingSet ? setting : null;
+            }
+            else if (
