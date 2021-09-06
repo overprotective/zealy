@@ -62,4 +62,5 @@ namespace ConfigurationManager
                     _currentKeyboardShortcutToSet = isBeingSet ? setting : null;
             }
             else if (setting.ShowRangeAsPercent != null && setting.AcceptableValueRange.Key != null)
-                Dr
+                DrawRangeField(setting);
+            else if 
