@@ -61,4 +61,5 @@ namespace ConfigurationManager
                 if (isBeingSet != isBeingSetOriginal)
                     _currentKeyboardShortcutToSet = isBeingSet ? setting : null;
             }
-            else if (setting.ShowRangeAsPercent != null && se
+            else if (setting.ShowRangeAsPercent != null && setting.AcceptableValueRange.Key != null)
+                Dr
