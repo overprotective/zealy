@@ -63,4 +63,5 @@ namespace ConfigurationManager
             }
             else if (setting.ShowRangeAsPercent != null && setting.AcceptableValueRange.Key != null)
                 DrawRangeField(setting);
-            else if 
+            else if (setting.AcceptableValues != null)
+         
