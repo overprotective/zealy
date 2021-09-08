@@ -65,4 +65,5 @@ namespace ConfigurationManager
                 DrawRangeField(setting);
             else if (setting.AcceptableValues != null)
                 DrawListField(setting);
-            els
+            else if (DrawFieldBasedOnValueType(setting))
+  
