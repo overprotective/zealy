@@ -70,4 +70,4 @@ namespace ConfigurationManager
             else if (setting.SettingType.IsEnum)
                 DrawEnumField(setting);
             else
-           
+                DrawUnknownField(setting, _instance.RightColu
