@@ -68,4 +68,6 @@ namespace ConfigurationManager
             else if (DrawFieldBasedOnValueType(setting))
                 return;
             else if (setting.SettingType.IsEnum)
-                DrawEn
+                DrawEnumField(setting);
+            else
+           
