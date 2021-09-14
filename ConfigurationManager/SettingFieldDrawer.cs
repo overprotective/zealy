@@ -73,4 +73,6 @@ namespace ConfigurationManager
                 DrawUnknownField(setting, _instance.RightColumnWidth);
         }
 
-        public static void
+        public static void ClearCache()
+        {
+            _comboBoxCache.Clear();
