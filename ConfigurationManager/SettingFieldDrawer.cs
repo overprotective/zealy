@@ -80,4 +80,6 @@ namespace ConfigurationManager
             foreach (var tex in _colorCache)
                 UnityEngine.Object.Destroy(tex.Value.Tex);
             _colorCache.Clear();
-     
+        }
+
+        public static void DrawCenteredLabel
