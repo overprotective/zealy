@@ -76,3 +76,5 @@ namespace ConfigurationManager
         public static void ClearCache()
         {
             _comboBoxCache.Clear();
+
+            foreach (var tex in _colorCache
