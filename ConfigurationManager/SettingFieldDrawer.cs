@@ -77,4 +77,5 @@ namespace ConfigurationManager
         {
             _comboBoxCache.Clear();
 
-            foreach (var tex in _colorCache
+            foreach (var tex in _colorCache)
+                UnityEngine.Object.Destroy(t
