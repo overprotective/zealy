@@ -83,4 +83,5 @@ namespace ConfigurationManager
         }
 
         public static void DrawCenteredLabel(string text, params GUILayoutOption[] options)
-        
+        {
+            GUILayout.BeginHorizontal(optio
