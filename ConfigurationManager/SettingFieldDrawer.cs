@@ -82,4 +82,5 @@ namespace ConfigurationManager
             _colorCache.Clear();
         }
 
-        public static void DrawCenteredLabel
+        public static void DrawCenteredLabel(string text, params GUILayoutOption[] options)
+        
