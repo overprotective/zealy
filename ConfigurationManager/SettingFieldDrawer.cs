@@ -88,4 +88,7 @@ namespace ConfigurationManager
             GUILayout.FlexibleSpace();
             GUILayout.Label(text);
             GUILayout.FlexibleSpace();
-            GUILayout
+            GUILayout.EndHorizontal();
+        }
+
+        private static GUISty
