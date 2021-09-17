@@ -87,4 +87,5 @@ namespace ConfigurationManager
             GUILayout.BeginHorizontal(options);
             GUILayout.FlexibleSpace();
             GUILayout.Label(text);
-            GUIL
+            GUILayout.FlexibleSpace();
+            GUILayout
