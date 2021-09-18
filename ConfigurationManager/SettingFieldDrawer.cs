@@ -94,4 +94,6 @@ namespace ConfigurationManager
         private static GUIStyle _categoryHeaderSkin;
         public static void DrawCategoryHeader(string text)
         {
-            if (_categ
+            if (_categoryHeaderSkin == null)
+            {
+          
