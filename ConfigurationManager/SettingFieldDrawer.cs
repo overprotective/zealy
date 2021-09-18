@@ -91,4 +91,5 @@ namespace ConfigurationManager
             GUILayout.EndHorizontal();
         }
 
-        private static GUISty
+        private static GUIStyle _categoryHeaderSkin;
+        public static void Dra
