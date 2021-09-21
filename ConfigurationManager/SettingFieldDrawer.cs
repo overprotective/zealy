@@ -96,4 +96,4 @@ namespace ConfigurationManager
         {
             if (_categoryHeaderSkin == null)
             {
-          
+                _categoryHeaderSkin = new GUIStyle(GUI.s
