@@ -99,4 +99,5 @@ namespace ConfigurationManager
                 _categoryHeaderSkin = new GUIStyle(GUI.skin.label)
                 {
                     alignment = TextAnchor.UpperCenter,
-   
+                    wordWrap = true,
+                 
