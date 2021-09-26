@@ -105,3 +105,4 @@ namespace ConfigurationManager
                 };
             }
 
+            GUILayout.Label(text, _categoryHeade
