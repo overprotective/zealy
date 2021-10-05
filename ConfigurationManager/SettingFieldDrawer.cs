@@ -105,4 +105,7 @@ namespace ConfigurationManager
                 };
             }
 
-            GUILayout.Label(text, _categoryHeade
+            GUILayout.Label(text, _categoryHeaderSkin);
+        }
+
+        private static GUI
