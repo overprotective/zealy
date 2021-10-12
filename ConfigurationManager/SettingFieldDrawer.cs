@@ -108,4 +108,5 @@ namespace ConfigurationManager
             GUILayout.Label(text, _categoryHeaderSkin);
         }
 
-        private static GUI
+        private static GUIStyle _pluginHeaderSkin;
+        public static bool DrawPluginHe
