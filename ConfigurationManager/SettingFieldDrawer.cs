@@ -110,4 +110,6 @@ namespace ConfigurationManager
 
         private static GUIStyle _pluginHeaderSkin;
         public static bool DrawPluginHeader(GUIContent content, bool isCollapsed)
-  
+        {
+            if (_pluginHeaderSkin == null)
+ 
