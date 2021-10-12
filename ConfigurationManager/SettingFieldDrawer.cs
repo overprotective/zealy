@@ -109,4 +109,5 @@ namespace ConfigurationManager
         }
 
         private static GUIStyle _pluginHeaderSkin;
-        public static bool DrawPluginHe
+        public static bool DrawPluginHeader(GUIContent content, bool isCollapsed)
+  
