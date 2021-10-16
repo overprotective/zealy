@@ -115,4 +115,5 @@ namespace ConfigurationManager
             {
                 _pluginHeaderSkin = new GUIStyle(GUI.skin.label)
                 {
-                    alignment = TextAnch
+                    alignment = TextAnchor.UpperCenter,
+                    wordWrap =
