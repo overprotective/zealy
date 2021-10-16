@@ -114,4 +114,5 @@ namespace ConfigurationManager
             if (_pluginHeaderSkin == null)
             {
                 _pluginHeaderSkin = new GUIStyle(GUI.skin.label)
-          
+                {
+                    alignment = TextAnch
