@@ -113,4 +113,5 @@ namespace ConfigurationManager
         {
             if (_pluginHeaderSkin == null)
             {
-                _pluginHe
+                _pluginHeaderSkin = new GUIStyle(GUI.skin.label)
+          
