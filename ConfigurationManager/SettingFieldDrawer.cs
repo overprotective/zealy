@@ -119,4 +119,7 @@ namespace ConfigurationManager
                     wordWrap = true,
                     stretchWidth = true,
                     fontSize = 15
-               
+                };
+            }
+
+            if (isCollapsed) con
