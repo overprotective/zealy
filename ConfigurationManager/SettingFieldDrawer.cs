@@ -117,4 +117,6 @@ namespace ConfigurationManager
                 {
                     alignment = TextAnchor.UpperCenter,
                     wordWrap = true,
-                    stretchWidth = tr
+                    stretchWidth = true,
+                    fontSize = 15
+               
