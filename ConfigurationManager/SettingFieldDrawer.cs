@@ -122,4 +122,5 @@ namespace ConfigurationManager
                 };
             }
 
-            if (isCollapsed) con
+            if (isCollapsed) content.text += "\n...";
+            return G
