@@ -123,4 +123,4 @@ namespace ConfigurationManager
             }
 
             if (isCollapsed) content.text += "\n...";
-            return G
+            return GUILayout.Button(content, _pluginHeaderSkin, GUIL
