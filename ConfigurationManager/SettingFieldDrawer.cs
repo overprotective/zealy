@@ -123,4 +123,7 @@ namespace ConfigurationManager
             }
 
             if (isCollapsed) content.text += "\n...";
-            return GUILayout.Button(content, _pluginHeaderSkin, GUIL
+            return GUILayout.Button(content, _pluginHeaderSkin, GUILayout.ExpandWidth(true));
+        }
+
+        public stati
