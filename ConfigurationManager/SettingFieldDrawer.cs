@@ -126,4 +126,6 @@ namespace ConfigurationManager
             return GUILayout.Button(content, _pluginHeaderSkin, GUILayout.ExpandWidth(true));
         }
 
-        public stati
+        public static bool DrawCurrentDropdown()
+        {
+            
