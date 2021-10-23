@@ -129,4 +129,5 @@ namespace ConfigurationManager
         public static bool DrawCurrentDropdown()
         {
             if (ComboBox.CurrentDropdownDrawer != null)
-            
+            {
+                ComboBox.CurrentDropdown
