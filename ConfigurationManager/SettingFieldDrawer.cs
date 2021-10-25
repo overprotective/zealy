@@ -131,4 +131,5 @@ namespace ConfigurationManager
             if (ComboBox.CurrentDropdownDrawer != null)
             {
                 ComboBox.CurrentDropdownDrawer.Invoke();
-                ComboBox.Cur
+                ComboBox.CurrentDropdownDrawer = null;
+           
