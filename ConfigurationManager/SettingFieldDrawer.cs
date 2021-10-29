@@ -132,4 +132,6 @@ namespace ConfigurationManager
             {
                 ComboBox.CurrentDropdownDrawer.Invoke();
                 ComboBox.CurrentDropdownDrawer = null;
-           
+                return true;
+            }
+            return fals
