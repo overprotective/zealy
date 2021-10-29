@@ -137,4 +137,6 @@ namespace ConfigurationManager
             return false;
         }
 
-        private static voi
+        private static void DrawListField(SettingEntryBase setting)
+        {
+   
