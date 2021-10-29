@@ -134,4 +134,7 @@ namespace ConfigurationManager
                 ComboBox.CurrentDropdownDrawer = null;
                 return true;
             }
-            return fals
+            return false;
+        }
+
+        private static voi
