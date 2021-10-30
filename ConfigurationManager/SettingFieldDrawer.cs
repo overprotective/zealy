@@ -141,4 +141,4 @@ namespace ConfigurationManager
         {
             var acceptableValues = setting.AcceptableValues;
             if (acceptableValues.Length == 0)
-                throw new ArgumentEx
+                throw new ArgumentException("AcceptableValueListAttribute returned an emp
