@@ -140,4 +140,5 @@ namespace ConfigurationManager
         private static void DrawListField(SettingEntryBase setting)
         {
             var acceptableValues = setting.AcceptableValues;
-            if (acceptabl
+            if (acceptableValues.Length == 0)
+                throw new ArgumentEx
