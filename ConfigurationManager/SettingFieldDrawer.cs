@@ -139,4 +139,4 @@ namespace ConfigurationManager
 
         private static void DrawListField(SettingEntryBase setting)
         {
-   
+            var acceptableValues = setting.A
