@@ -143,4 +143,5 @@ namespace ConfigurationManager
             if (acceptableValues.Length == 0)
                 throw new ArgumentException("AcceptableValueListAttribute returned an empty list of acceptable values. You need to supply at least 1 option.");
 
-            if (!setting.SettingType.IsInstanceOfType(acceptab
+            if (!setting.SettingType.IsInstanceOfType(acceptableValues.FirstOrDefault(x => x != null)))
+                throw
