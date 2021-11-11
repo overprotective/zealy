@@ -147,4 +147,5 @@ namespace ConfigurationManager
                 throw new ArgumentException("AcceptableValueListAttribute returned a list with items of type other than the settng type itself.");
 
             if (setting.SettingType == typeof(KeyCode))
-  
+                DrawKeyCode(setting);
+          
