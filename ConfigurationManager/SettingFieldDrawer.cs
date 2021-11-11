@@ -146,4 +146,5 @@ namespace ConfigurationManager
             if (!setting.SettingType.IsInstanceOfType(acceptableValues.FirstOrDefault(x => x != null)))
                 throw new ArgumentException("AcceptableValueListAttribute returned a list with items of type other than the settng type itself.");
 
-            if (
+            if (setting.SettingType == typeof(KeyCode))
+  
