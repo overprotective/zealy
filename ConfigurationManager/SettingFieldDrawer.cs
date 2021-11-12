@@ -149,4 +149,5 @@ namespace ConfigurationManager
             if (setting.SettingType == typeof(KeyCode))
                 DrawKeyCode(setting);
             else
-                DrawComboboxField(setting, ac
+                DrawComboboxField(setting, acceptableValues, _instance.SettingWindowRect.yMax);
+        
