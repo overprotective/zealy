@@ -150,4 +150,6 @@ namespace ConfigurationManager
                 DrawKeyCode(setting);
             else
                 DrawComboboxField(setting, acceptableValues, _instance.SettingWindowRect.yMax);
-        
+        }
+
+        private static bool DrawFieldBas
