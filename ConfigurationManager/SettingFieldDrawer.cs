@@ -152,4 +152,6 @@ namespace ConfigurationManager
                 DrawComboboxField(setting, acceptableValues, _instance.SettingWindowRect.yMax);
         }
 
-        private static bool DrawFieldBas
+        private static bool DrawFieldBasedOnValueType(SettingEntryBase setting)
+        {
+  
