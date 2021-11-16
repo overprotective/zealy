@@ -154,4 +154,4 @@ namespace ConfigurationManager
 
         private static bool DrawFieldBasedOnValueType(SettingEntryBase setting)
         {
-  
+            if (SettingDrawHandlers.TryGetValue(setting.
