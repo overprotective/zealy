@@ -156,3 +156,4 @@ namespace ConfigurationManager
         {
             if (SettingDrawHandlers.TryGetValue(setting.SettingType, out var drawMethod))
             {
+                drawMethod(setting);
