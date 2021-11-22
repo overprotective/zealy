@@ -162,4 +162,6 @@ namespace ConfigurationManager
             return false;
         }
 
-        private static void DrawBoolField(SettingEntryBase set
+        private static void DrawBoolField(SettingEntryBase setting)
+        {
+            var boolVal = (b
