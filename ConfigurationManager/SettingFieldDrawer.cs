@@ -159,4 +159,7 @@ namespace ConfigurationManager
                 drawMethod(setting);
                 return true;
             }
-            return
+            return false;
+        }
+
+        private stat
