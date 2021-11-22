@@ -162,4 +162,4 @@ namespace ConfigurationManager
             return false;
         }
 
-        private stat
+        private static void DrawBoolField(SettingEntryBase set
