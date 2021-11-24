@@ -165,4 +165,4 @@ namespace ConfigurationManager
         private static void DrawBoolField(SettingEntryBase setting)
         {
             var boolVal = (bool)setting.Get();
-            var result = GUILa
+            var result = GUILayout.Toggle(boolVal, boolVal ? "Enabled" : "Disabl
