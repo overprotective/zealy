@@ -164,4 +164,5 @@ namespace ConfigurationManager
 
         private static void DrawBoolField(SettingEntryBase setting)
         {
-            var boolVal = (b
+            var boolVal = (bool)setting.Get();
+            var result = GUILa
