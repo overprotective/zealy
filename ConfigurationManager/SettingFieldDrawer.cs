@@ -170,4 +170,5 @@ namespace ConfigurationManager
                 setting.Set(result);
         }
 
-        private static void Dr
+        private static void DrawEnumField(SettingEntryBase setting)
+        {
