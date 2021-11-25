@@ -166,4 +166,5 @@ namespace ConfigurationManager
         {
             var boolVal = (bool)setting.Get();
             var result = GUILayout.Toggle(boolVal, boolVal ? "Enabled" : "Disabled", GUILayout.ExpandWidth(true));
-            if
+            if (result != boolVal)
+                setting.
