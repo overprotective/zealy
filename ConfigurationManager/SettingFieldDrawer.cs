@@ -167,4 +167,7 @@ namespace ConfigurationManager
             var boolVal = (bool)setting.Get();
             var result = GUILayout.Toggle(boolVal, boolVal ? "Enabled" : "Disabled", GUILayout.ExpandWidth(true));
             if (result != boolVal)
-                setting.
+                setting.Set(result);
+        }
+
+        private static void Dr
