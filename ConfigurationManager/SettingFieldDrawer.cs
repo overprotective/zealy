@@ -172,3 +172,4 @@ namespace ConfigurationManager
 
         private static void DrawEnumField(SettingEntryBase setting)
         {
+            if (setting.SettingType.GetCustomAt
