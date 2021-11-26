@@ -173,4 +173,4 @@ namespace ConfigurationManager
         private static void DrawEnumField(SettingEntryBase setting)
         {
             if (setting.SettingType.GetCustomAttributes(typeof(FlagsAttribute), false).Any())
-                DrawFlagsField(sett
+                DrawFlagsField(setting, Enum.GetValues(setting.SettingType), _instance.R
