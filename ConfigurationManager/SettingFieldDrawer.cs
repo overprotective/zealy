@@ -175,4 +175,4 @@ namespace ConfigurationManager
             if (setting.SettingType.GetCustomAttributes(typeof(FlagsAttribute), false).Any())
                 DrawFlagsField(setting, Enum.GetValues(setting.SettingType), _instance.RightColumnWidth);
             else
-               
+                DrawComboboxField(setting, Enum.GetValues(setting.S
