@@ -178,4 +178,4 @@ namespace ConfigurationManager
                 DrawComboboxField(setting, Enum.GetValues(setting.SettingType), _instance.SettingWindowRect.yMax);
         }
 
-        private static void DrawFlagsField(Setting
+        private static void DrawFlagsField(SettingEntryBase setting, IList enumValues, int ma
