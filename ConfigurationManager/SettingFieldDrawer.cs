@@ -180,4 +180,5 @@ namespace ConfigurationManager
 
         private static void DrawFlagsField(SettingEntryBase setting, IList enumValues, int maxWidth)
         {
-            var currentV
+            var currentValue = Convert.ToInt64(setting.Get());
+            var all
