@@ -181,4 +181,6 @@ namespace ConfigurationManager
         private static void DrawFlagsField(SettingEntryBase setting, IList enumValues, int maxWidth)
         {
             var currentValue = Convert.ToInt64(setting.Get());
-            var allValues = enumValues.Cast<Enum>().Select(x => new { name = x.ToString()
+            var allValues = enumValues.Cast<Enum>().Select(x => new { name = x.ToString(), val = Convert.ToInt64(x) }).ToArray();
+
+          
