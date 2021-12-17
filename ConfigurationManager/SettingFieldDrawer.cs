@@ -183,4 +183,4 @@ namespace ConfigurationManager
             var currentValue = Convert.ToInt64(setting.Get());
             var allValues = enumValues.Cast<Enum>().Select(x => new { name = x.ToString(), val = Convert.ToInt64(x) }).ToArray();
 
-            // Vertically stack Horizontal groups of the opti
+            // Vertically stack Horizontal groups of the options to deal with the options taking more width than is av
