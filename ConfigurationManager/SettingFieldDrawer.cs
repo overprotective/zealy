@@ -186,4 +186,4 @@ namespace ConfigurationManager
             // Vertically stack Horizontal groups of the options to deal with the options taking more width than is available in the window
             GUILayout.BeginVertical(GUILayout.MaxWidth(maxWidth));
             {
- 
+                for (var index = 0; index < a
