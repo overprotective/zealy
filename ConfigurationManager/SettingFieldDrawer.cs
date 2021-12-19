@@ -184,4 +184,6 @@ namespace ConfigurationManager
             var allValues = enumValues.Cast<Enum>().Select(x => new { name = x.ToString(), val = Convert.ToInt64(x) }).ToArray();
 
             // Vertically stack Horizontal groups of the options to deal with the options taking more width than is available in the window
-            GUILayout.BeginVe
+            GUILayout.BeginVertical(GUILayout.MaxWidth(maxWidth));
+            {
+ 
