@@ -188,4 +188,5 @@ namespace ConfigurationManager
             {
                 for (var index = 0; index < allValues.Length;)
                 {
-         
+                    GUILayout.BeginHorizontal();
+       
