@@ -190,4 +190,5 @@ namespace ConfigurationManager
                 {
                     GUILayout.BeginHorizontal();
                     {
+                        var currentWidth = 0;
                   
