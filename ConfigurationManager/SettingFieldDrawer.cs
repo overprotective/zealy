@@ -193,4 +193,6 @@ namespace ConfigurationManager
                         var currentWidth = 0;
                         for (; index < allValues.Length; index++)
                         {
-             
+                            var value = allValues[index];
+
+               
