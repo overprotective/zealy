@@ -195,4 +195,5 @@ namespace ConfigurationManager
                         {
                             var value = allValues[index];
 
-                            // Skip the 0 / none enum value,
+                            // Skip the 0 / none enum value, just uncheck everything to get 0
+                
