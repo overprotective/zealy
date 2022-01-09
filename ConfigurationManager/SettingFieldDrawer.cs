@@ -197,4 +197,5 @@ namespace ConfigurationManager
 
                             // Skip the 0 / none enum value, just uncheck everything to get 0
                             if (value.val != 0)
-                         
+                            {
+                                // Make sure t
