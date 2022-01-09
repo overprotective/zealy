@@ -199,4 +199,4 @@ namespace ConfigurationManager
                             if (value.val != 0)
                             {
                                 // Make sure this horizontal group doesn't extend over window width, if it does then start a new horiz group below
-  
+                                var textDimension =
