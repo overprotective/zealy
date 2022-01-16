@@ -201,4 +201,5 @@ namespace ConfigurationManager
                                 // Make sure this horizontal group doesn't extend over window width, if it does then start a new horiz group below
                                 var textDimension = (int)GUI.skin.toggle.CalcSize(new GUIContent(value.name)).x;
                                 currentWidth += textDimension;
-                           
+                                if (currentWidth > maxWidth)
+                  
