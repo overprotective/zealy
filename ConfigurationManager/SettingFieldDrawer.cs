@@ -202,4 +202,6 @@ namespace ConfigurationManager
                                 var textDimension = (int)GUI.skin.toggle.CalcSize(new GUIContent(value.name)).x;
                                 currentWidth += textDimension;
                                 if (currentWidth > maxWidth)
-                  
+                                    break;
+
+       
