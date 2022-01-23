@@ -205,4 +205,4 @@ namespace ConfigurationManager
                                     break;
 
                                 GUI.changed = false;
-   
+                                var newVal = GUI
