@@ -204,4 +204,5 @@ namespace ConfigurationManager
                                 if (currentWidth > maxWidth)
                                     break;
 
-       
+                                GUI.changed = false;
+   
