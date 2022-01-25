@@ -205,4 +205,5 @@ namespace ConfigurationManager
                                     break;
 
                                 GUI.changed = false;
-                                var newVal = GUILayout.Toggle((currentValue & value.val) == value.va
+                                var newVal = GUILayout.Toggle((currentValue & value.val) == value.val, value.name,
+                                    
