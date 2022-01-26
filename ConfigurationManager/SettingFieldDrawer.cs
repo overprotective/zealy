@@ -207,4 +207,5 @@ namespace ConfigurationManager
                                 GUI.changed = false;
                                 var newVal = GUILayout.Toggle((currentValue & value.val) == value.val, value.name,
                                     GUILayout.ExpandWidth(false));
-              
+                                if (GUI.changed)
+                   
