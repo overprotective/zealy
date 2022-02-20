@@ -209,4 +209,5 @@ namespace ConfigurationManager
                                     GUILayout.ExpandWidth(false));
                                 if (GUI.changed)
                                 {
-                                    var newValue = newVal ? currentValue | value.val : cu
+                                    var newValue = newVal ? currentValue | value.val : currentValue & ~value.val;
+                     
