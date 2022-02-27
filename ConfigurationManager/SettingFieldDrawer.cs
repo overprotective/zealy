@@ -213,4 +213,6 @@ namespace ConfigurationManager
                                     setting.Set(Enum.ToObject(setting.SettingType, newValue));
                                 }
                             }
-                
+                        }
+                    }
+                 
