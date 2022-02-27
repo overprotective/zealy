@@ -212,4 +212,5 @@ namespace ConfigurationManager
                                     var newValue = newVal ? currentValue | value.val : currentValue & ~value.val;
                                     setting.Set(Enum.ToObject(setting.SettingType, newValue));
                                 }
-    
+                            }
+                
