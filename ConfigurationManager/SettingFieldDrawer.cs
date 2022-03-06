@@ -217,3 +217,6 @@ namespace ConfigurationManager
                     }
                     GUILayout.EndHorizontal();
                 }
+
+                GUI.changed = false;
+      
