@@ -219,4 +219,6 @@ namespace ConfigurationManager
                 }
 
                 GUI.changed = false;
-      
+            }
+            GUILayout.EndVertical();
+    
