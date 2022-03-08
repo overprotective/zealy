@@ -221,4 +221,4 @@ namespace ConfigurationManager
                 GUI.changed = false;
             }
             GUILayout.EndVertical();
-    
+            // Make sure the reset button is properly spaced
