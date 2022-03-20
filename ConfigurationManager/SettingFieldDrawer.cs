@@ -227,4 +227,4 @@ namespace ConfigurationManager
 
         private static void DrawComboboxField(SettingEntryBase setting, IList list, float windowYmax)
         {
-           
+            var buttonText = ObjectToGuiContent(setting
