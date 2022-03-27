@@ -228,4 +228,4 @@ namespace ConfigurationManager
         private static void DrawComboboxField(SettingEntryBase setting, IList list, float windowYmax)
         {
             var buttonText = ObjectToGuiContent(setting.Get());
-            var dispRect = GUILayo
+            var dispRect = GUILayoutUtility.GetRect(buttonText, GUI.skin.button, GUILayout.Expa
