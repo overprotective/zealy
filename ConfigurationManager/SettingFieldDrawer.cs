@@ -230,4 +230,5 @@ namespace ConfigurationManager
             var buttonText = ObjectToGuiContent(setting.Get());
             var dispRect = GUILayoutUtility.GetRect(buttonText, GUI.skin.button, GUILayout.ExpandWidth(true));
 
-            if (!_comboBoxC
+            if (!_comboBoxCache.TryGetValue(setting, out var box))
+           
