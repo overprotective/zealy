@@ -231,4 +231,5 @@ namespace ConfigurationManager
             var dispRect = GUILayoutUtility.GetRect(buttonText, GUI.skin.button, GUILayout.ExpandWidth(true));
 
             if (!_comboBoxCache.TryGetValue(setting, out var box))
-           
+            {
+                box = new ComboBox(dispRect, buttonTe
