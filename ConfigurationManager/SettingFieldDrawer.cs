@@ -232,4 +232,4 @@ namespace ConfigurationManager
 
             if (!_comboBoxCache.TryGetValue(setting, out var box))
             {
-                box = new ComboBox(dispRect, buttonText, list.Cast<object>().Select(
+                box = new ComboBox(dispRect, buttonText, list.Cast<object>().Select(ObjectToGuiContent).ToArray(), GUI.skin.button, wind
