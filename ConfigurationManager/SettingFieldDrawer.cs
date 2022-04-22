@@ -236,4 +236,5 @@ namespace ConfigurationManager
                 _comboBoxCache[setting] = box;
             }
             else
-            
+            {
+                box.Rect = dispRect
