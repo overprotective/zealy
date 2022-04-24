@@ -238,4 +238,7 @@ namespace ConfigurationManager
             else
             {
                 box.Rect = dispRect;
-                box.ButtonContent = butto
+                box.ButtonContent = buttonText;
+            }
+
+            box.Show(id =>
