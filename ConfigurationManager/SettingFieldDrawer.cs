@@ -237,4 +237,5 @@ namespace ConfigurationManager
             }
             else
             {
-                box.Rect = dispRect
+                box.Rect = dispRect;
+                box.ButtonContent = butto
