@@ -242,3 +242,5 @@ namespace ConfigurationManager
             }
 
             box.Show(id =>
+            {
+                if (id >= 0 && id < lis
