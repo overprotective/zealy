@@ -248,4 +248,4 @@ namespace ConfigurationManager
             });
         }
 
-      
+        private static GUIContent ObjectToGuiContent(
