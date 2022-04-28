@@ -244,4 +244,8 @@ namespace ConfigurationManager
             box.Show(id =>
             {
                 if (id >= 0 && id < list.Count)
-                    setting.Set
+                    setting.Set(list[id]);
+            });
+        }
+
+      
