@@ -253,4 +253,4 @@ namespace ConfigurationManager
             if (x is Enum)
             {
                 var enumType = x.GetType();
-                var enumMembe
+                var enumMember = enumType.GetMember(x.ToString()).FirstOrD
