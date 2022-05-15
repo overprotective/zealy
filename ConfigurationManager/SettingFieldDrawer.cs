@@ -253,4 +253,5 @@ namespace ConfigurationManager
             if (x is Enum)
             {
                 var enumType = x.GetType();
-                var enumMember = enumType.GetMember(x.ToString()).FirstOrD
+                var enumMember = enumType.GetMember(x.ToString()).FirstOrDefault();
+                var attr = enu
