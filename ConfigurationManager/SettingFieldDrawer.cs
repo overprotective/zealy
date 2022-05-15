@@ -252,4 +252,5 @@ namespace ConfigurationManager
         {
             if (x is Enum)
             {
-                var enumType = x
+                var enumType = x.GetType();
+                var enumMembe
