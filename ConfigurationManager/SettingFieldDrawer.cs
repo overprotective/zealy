@@ -254,4 +254,5 @@ namespace ConfigurationManager
             {
                 var enumType = x.GetType();
                 var enumMember = enumType.GetMember(x.ToString()).FirstOrDefault();
-                var attr = enumMember?.GetCustomAttributes(typeof(DescriptionAttribute), 
+                var attr = enumMember?.GetCustomAttributes(typeof(DescriptionAttribute), false).Cast<DescriptionAttribute>().FirstOrDefault();
+     
