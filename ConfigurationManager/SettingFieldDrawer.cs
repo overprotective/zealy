@@ -259,4 +259,7 @@ namespace ConfigurationManager
                     return new GUIContent(attr.Description);
                 return new GUIContent(x.ToString().ToProperCase());
             }
-            return n
+            return new GUIContent(x.ToString());
+        }
+
+       
