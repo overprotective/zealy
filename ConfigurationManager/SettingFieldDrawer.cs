@@ -262,4 +262,6 @@ namespace ConfigurationManager
             return new GUIContent(x.ToString());
         }
 
-        private static void DrawRangeField(Set
+        private static void DrawRangeField(SettingEntryBase setting)
+        {
+            v
