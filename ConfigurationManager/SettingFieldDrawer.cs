@@ -264,4 +264,5 @@ namespace ConfigurationManager
 
         private static void DrawRangeField(SettingEntryBase setting)
         {
-            v
+            var value = setting.Get();
+            var converted = (float)Co
