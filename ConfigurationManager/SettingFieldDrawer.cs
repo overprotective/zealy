@@ -265,4 +265,4 @@ namespace ConfigurationManager
         private static void DrawRangeField(SettingEntryBase setting)
         {
             var value = setting.Get();
-            var converted = (float)Co
+            var converted = (float)Convert.ToDouble(value, CultureInfo.Invari
