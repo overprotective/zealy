@@ -266,4 +266,5 @@ namespace ConfigurationManager
         {
             var value = setting.Get();
             var converted = (float)Convert.ToDouble(value, CultureInfo.InvariantCulture);
-            var leftValue = (float)Convert.ToDouble(setting.AcceptableValueRange.Key, 
+            var leftValue = (float)Convert.ToDouble(setting.AcceptableValueRange.Key, CultureInfo.InvariantCulture);
+            var ri
