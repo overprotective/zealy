@@ -270,4 +270,4 @@ namespace ConfigurationManager
             var rightValue = (float)Convert.ToDouble(setting.AcceptableValueRange.Value, CultureInfo.InvariantCulture);
 
             var result = GUILayout.HorizontalSlider(converted, leftValue, rightValue, GUILayout.ExpandWidth(true));
-            if (
+            if (Math.Abs(result - converted) > Mathf.Abs(rig
