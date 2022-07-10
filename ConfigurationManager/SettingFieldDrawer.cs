@@ -272,4 +272,5 @@ namespace ConfigurationManager
             var result = GUILayout.HorizontalSlider(converted, leftValue, rightValue, GUILayout.ExpandWidth(true));
             if (Math.Abs(result - converted) > Mathf.Abs(rightValue - leftValue) / 1000)
             {
-                var newValue = Convert.ChangeType(result, setting.SettingType, CultureInfo.In
+                var newValue = Convert.ChangeType(result, setting.SettingType, CultureInfo.InvariantCulture);
+                setting.Set(
