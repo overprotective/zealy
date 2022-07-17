@@ -276,4 +276,6 @@ namespace ConfigurationManager
                 setting.Set(newValue);
             }
 
-            if (setting.ShowRan
+            if (setting.ShowRangeAsPercent == true)
+            {
+              
