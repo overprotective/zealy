@@ -273,4 +273,7 @@ namespace ConfigurationManager
             if (Math.Abs(result - converted) > Mathf.Abs(rightValue - leftValue) / 1000)
             {
                 var newValue = Convert.ChangeType(result, setting.SettingType, CultureInfo.InvariantCulture);
-                setting.Set(
+                setting.Set(newValue);
+            }
+
+            if (setting.ShowRan
