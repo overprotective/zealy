@@ -278,4 +278,5 @@ namespace ConfigurationManager
 
             if (setting.ShowRangeAsPercent == true)
             {
-              
+                DrawCenteredLabel(
+                    Math
