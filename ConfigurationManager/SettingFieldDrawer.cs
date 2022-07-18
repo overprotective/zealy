@@ -279,4 +279,4 @@ namespace ConfigurationManager
             if (setting.ShowRangeAsPercent == true)
             {
                 DrawCenteredLabel(
-                    Math
+                    Mathf.Round(100 * Mathf.Abs(result - leftValue) / Mathf.Abs(
