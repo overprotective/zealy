@@ -282,4 +282,6 @@ namespace ConfigurationManager
                     Mathf.Round(100 * Mathf.Abs(result - leftValue) / Mathf.Abs(rightValue - leftValue)) + "%",
                     GUILayout.Width(50));
             }
-            el
+            else
+            {
+                var strVal = value.ToSt
