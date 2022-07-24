@@ -280,4 +280,6 @@ namespace ConfigurationManager
             {
                 DrawCenteredLabel(
                     Mathf.Round(100 * Mathf.Abs(result - leftValue) / Mathf.Abs(rightValue - leftValue)) + "%",
-                    GUILa
+                    GUILayout.Width(50));
+            }
+            el
