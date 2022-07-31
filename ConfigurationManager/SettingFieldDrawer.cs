@@ -285,4 +285,4 @@ namespace ConfigurationManager
             else
             {
                 var strVal = value.ToString().AppendZeroIfFloat(setting.SettingType);
-      
+                var strResult = GUILayout.Te
