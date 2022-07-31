@@ -284,4 +284,5 @@ namespace ConfigurationManager
             }
             else
             {
-                var strVal = value.ToSt
+                var strVal = value.ToString().AppendZeroIfFloat(setting.SettingType);
+      
