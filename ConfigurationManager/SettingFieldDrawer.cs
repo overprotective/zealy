@@ -286,4 +286,5 @@ namespace ConfigurationManager
             {
                 var strVal = value.ToString().AppendZeroIfFloat(setting.SettingType);
                 var strResult = GUILayout.TextField(strVal, GUILayout.Width(50));
-          
+                if (strResult != strVal)
+             
