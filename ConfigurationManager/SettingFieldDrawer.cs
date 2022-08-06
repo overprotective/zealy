@@ -290,4 +290,4 @@ namespace ConfigurationManager
                 {
                     try
                     {
-                        var resultVal = (fl
+                        var resultVal = (float)Convert.ToDouble(strResult, CultureInfo.InvariantC
