@@ -289,4 +289,5 @@ namespace ConfigurationManager
                 if (strResult != strVal)
                 {
                     try
-                    
+                    {
+                        var resultVal = (fl
