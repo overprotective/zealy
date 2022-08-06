@@ -291,4 +291,4 @@ namespace ConfigurationManager
                     try
                     {
                         var resultVal = (float)Convert.ToDouble(strResult, CultureInfo.InvariantCulture);
-                        var clampedRes
+                        var clampedResultVal = Mathf.Clamp(resultVal, leftValue, right
