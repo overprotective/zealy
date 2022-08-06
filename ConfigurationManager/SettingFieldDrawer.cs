@@ -290,4 +290,5 @@ namespace ConfigurationManager
                 {
                     try
                     {
-                        var resultVal = (float)Convert.ToDouble(strResult, CultureInfo.InvariantC
+                        var resultVal = (float)Convert.ToDouble(strResult, CultureInfo.InvariantCulture);
+                        var clampedRes
