@@ -292,4 +292,4 @@ namespace ConfigurationManager
                     {
                         var resultVal = (float)Convert.ToDouble(strResult, CultureInfo.InvariantCulture);
                         var clampedResultVal = Mathf.Clamp(resultVal, leftValue, rightValue);
-                        setting.Set(Convert.C
+                        setting.Set(Convert.ChangeType(clampedResultVal, setting.SettingT
