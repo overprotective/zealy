@@ -294,4 +294,6 @@ namespace ConfigurationManager
                         var clampedResultVal = Mathf.Clamp(resultVal, leftValue, rightValue);
                         setting.Set(Convert.ChangeType(clampedResultVal, setting.SettingType, CultureInfo.InvariantCulture));
                     }
-                    catch (Format
+                    catch (FormatException)
+                    {
+                    
