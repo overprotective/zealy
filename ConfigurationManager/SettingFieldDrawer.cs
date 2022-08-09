@@ -297,4 +297,8 @@ namespace ConfigurationManager
                     catch (FormatException)
                     {
                         // Ignore user typing in bad data
-       
+                    }
+                }
+            }
+        }
+
