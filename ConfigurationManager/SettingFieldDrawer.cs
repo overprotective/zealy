@@ -302,4 +302,4 @@ namespace ConfigurationManager
             }
         }
 
-        private void DrawUnknownField(Setti
+        private void DrawUnknownField(SettingEntryBase setting, int rightColumn
