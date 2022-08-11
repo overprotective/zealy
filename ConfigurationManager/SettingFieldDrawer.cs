@@ -304,4 +304,5 @@ namespace ConfigurationManager
 
         private void DrawUnknownField(SettingEntryBase setting, int rightColumnWidth)
         {
-            // Try to use us
+            // Try to use user-supplied converters
+            if (setting.O
