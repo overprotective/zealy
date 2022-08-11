@@ -305,4 +305,5 @@ namespace ConfigurationManager
         private void DrawUnknownField(SettingEntryBase setting, int rightColumnWidth)
         {
             // Try to use user-supplied converters
-            if (setting.O
+            if (setting.ObjToStr != null && setting.StrToObj != null)
+  
