@@ -306,4 +306,5 @@ namespace ConfigurationManager
         {
             // Try to use user-supplied converters
             if (setting.ObjToStr != null && setting.StrToObj != null)
-  
+            {
+                var text = setting.ObjToStr(sett
