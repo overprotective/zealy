@@ -308,4 +308,4 @@ namespace ConfigurationManager
             if (setting.ObjToStr != null && setting.StrToObj != null)
             {
                 var text = setting.ObjToStr(setting.Get()).AppendZeroIfFloat(setting.SettingType);
-                var result = GUILayout.TextField
+                var result = GUILayout.TextField(text, GUILayout.Width(rightColumnWidth), G
