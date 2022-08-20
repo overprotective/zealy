@@ -316,4 +316,4 @@ namespace ConfigurationManager
             {
                 // Fall back to slow/less reliable method
                 var rawValue = setting.Get();
-                var va
+                var value = rawValue == null ? "NULL" : rawValue.ToStr
