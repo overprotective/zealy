@@ -315,4 +315,5 @@ namespace ConfigurationManager
             else
             {
                 // Fall back to slow/less reliable method
-             
+                var rawValue = setting.Get();
+                var va
