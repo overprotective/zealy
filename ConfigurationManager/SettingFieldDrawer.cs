@@ -314,4 +314,5 @@ namespace ConfigurationManager
             }
             else
             {
-       
+                // Fall back to slow/less reliable method
+             
