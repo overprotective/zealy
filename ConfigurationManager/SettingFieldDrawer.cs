@@ -316,4 +316,5 @@ namespace ConfigurationManager
             {
                 // Fall back to slow/less reliable method
                 var rawValue = setting.Get();
-                var value = rawValue == null ? "NULL" : rawValue.ToStr
+                var value = rawValue == null ? "NULL" : rawValue.ToString().AppendZeroIfFloat(setting.SettingType);
+  
