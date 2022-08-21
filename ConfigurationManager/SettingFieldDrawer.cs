@@ -319,4 +319,4 @@ namespace ConfigurationManager
                 var value = rawValue == null ? "NULL" : rawValue.ToString().AppendZeroIfFloat(setting.SettingType);
                 if (CanCovert(value, setting.SettingType))
                 {
-                    var result = GUILayout.Text
+                    var result = GUILayout.TextField(value, GUILayout.Width(rightColumn
