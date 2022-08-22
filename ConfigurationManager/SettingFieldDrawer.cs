@@ -321,4 +321,4 @@ namespace ConfigurationManager
                 {
                     var result = GUILayout.TextField(value, GUILayout.Width(rightColumnWidth), GUILayout.MaxWidth(rightColumnWidth));
                     if (result != value)
-                        setting.Set(Convert.Cha
+                        setting.Set(Convert.ChangeType(result, setting.SettingType, Cultur
