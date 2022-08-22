@@ -323,4 +323,6 @@ namespace ConfigurationManager
                     if (result != value)
                         setting.Set(Convert.ChangeType(result, setting.SettingType, CultureInfo.InvariantCulture));
                 }
-                e
+                else
+                {
+                    GUILayout.TextA
