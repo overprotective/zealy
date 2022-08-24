@@ -325,4 +325,8 @@ namespace ConfigurationManager
                 }
                 else
                 {
-                    GUILayout.TextArea(value, GUILayout.MaxWidth(rightColumnWidth
+                    GUILayout.TextArea(value, GUILayout.MaxWidth(rightColumnWidth));
+                }
+            }
+
+            /
