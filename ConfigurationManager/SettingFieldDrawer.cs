@@ -329,4 +329,4 @@ namespace ConfigurationManager
                 }
             }
 
-            /
+            // When using MaxWidth the width will always be les
