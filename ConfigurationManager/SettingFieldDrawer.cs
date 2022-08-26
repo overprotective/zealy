@@ -329,4 +329,5 @@ namespace ConfigurationManager
                 }
             }
 
-            // When using MaxWidth the width will always be less than full window size, use this to fill this gap and push the Reset button to
+            // When using MaxWidth the width will always be less than full window size, use this to fill this gap and push the Reset button to the right edge
+            GUILayout.FlexibleSpace()
