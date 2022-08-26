@@ -329,4 +329,4 @@ namespace ConfigurationManager
                 }
             }
 
-            // When using MaxWidth the width will always be les
+            // When using MaxWidth the width will always be less than full window size, use this to fil
