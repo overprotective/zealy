@@ -333,4 +333,4 @@ namespace ConfigurationManager
             GUILayout.FlexibleSpace();
         }
 
-        private readonly Dictionary<Ty
+        private readonly Dictionary<Type, bool> _canCovertCache = new Dictionary<Ty
