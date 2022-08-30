@@ -337,4 +337,8 @@ namespace ConfigurationManager
         private bool CanCovert(string value, Type type)
         {
             if (_canCovertCache.ContainsKey(type))
-                return _canCovertC
+                return _canCovertCache[type];
+
+            try
+            {
+    
