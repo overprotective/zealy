@@ -336,4 +336,5 @@ namespace ConfigurationManager
         private readonly Dictionary<Type, bool> _canCovertCache = new Dictionary<Type, bool>();
         private bool CanCovert(string value, Type type)
         {
-            if (_canCovertCache
+            if (_canCovertCache.ContainsKey(type))
+                return _canCovertC
