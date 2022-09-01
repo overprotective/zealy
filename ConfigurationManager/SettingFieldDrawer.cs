@@ -342,3 +342,4 @@ namespace ConfigurationManager
             try
             {
                 var _ = Convert.ChangeType(value, type);
+                _canCovertCache[type
