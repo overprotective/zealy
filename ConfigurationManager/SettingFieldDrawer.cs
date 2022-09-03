@@ -344,4 +344,7 @@ namespace ConfigurationManager
                 var _ = Convert.ChangeType(value, type);
                 _canCovertCache[type] = true;
                 return true;
-   
+            }
+            catch
+            {
+              
