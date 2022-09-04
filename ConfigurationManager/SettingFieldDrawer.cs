@@ -347,4 +347,5 @@ namespace ConfigurationManager
             }
             catch
             {
-              
+                _canCovertCache[type] = false;
+                
