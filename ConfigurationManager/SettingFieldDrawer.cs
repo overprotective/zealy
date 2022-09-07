@@ -352,4 +352,6 @@ namespace ConfigurationManager
             }
         }
 
-        private static void DrawKeyCode(SettingEntr
+        private static void DrawKeyCode(SettingEntryBase setting)
+        {
+            if (_curren
