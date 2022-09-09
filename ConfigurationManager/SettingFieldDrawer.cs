@@ -354,4 +354,6 @@ namespace ConfigurationManager
 
         private static void DrawKeyCode(SettingEntryBase setting)
         {
-            if (_curren
+            if (_currentKeyboardShortcutToSet == setting)
+            {
+          
