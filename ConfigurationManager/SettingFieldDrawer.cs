@@ -356,4 +356,5 @@ namespace ConfigurationManager
         {
             if (_currentKeyboardShortcutToSet == setting)
             {
-                GUILayout.Label("Press any key", GUILayou
+                GUILayout.Label("Press any key", GUILayout.ExpandWidth(true));
+                GUIUtili
