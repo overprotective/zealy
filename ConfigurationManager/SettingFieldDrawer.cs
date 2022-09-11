@@ -360,4 +360,4 @@ namespace ConfigurationManager
                 GUIUtility.keyboardControl = -1;
 
                 var input = UnityInput.Current;
-                if (_k
+                if (_keysToCheck == null) _keysToCheck = input.S
