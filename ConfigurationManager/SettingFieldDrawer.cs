@@ -359,4 +359,5 @@ namespace ConfigurationManager
                 GUILayout.Label("Press any key", GUILayout.ExpandWidth(true));
                 GUIUtility.keyboardControl = -1;
 
-                var input 
+                var input = UnityInput.Current;
+                if (_k
