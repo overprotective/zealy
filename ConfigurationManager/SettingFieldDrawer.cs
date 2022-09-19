@@ -361,4 +361,5 @@ namespace ConfigurationManager
 
                 var input = UnityInput.Current;
                 if (_keysToCheck == null) _keysToCheck = input.SupportedKeyCodes.Except(new[] { KeyCode.Mouse0, KeyCode.None }).ToArray();
-                for
+                foreach (var key in _keysToCheck)
+        
