@@ -366,4 +366,5 @@ namespace ConfigurationManager
                     if (input.GetKeyUp(key))
                     {
                         setting.Set(key);
-                        _curre
+                        _currentKeyboardShortcutToSet = null;
+                   
