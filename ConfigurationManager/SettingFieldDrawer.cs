@@ -369,4 +369,6 @@ namespace ConfigurationManager
                         _currentKeyboardShortcutToSet = null;
                         break;
                     }
- 
+                }
+
+                if (GUILayout.B
