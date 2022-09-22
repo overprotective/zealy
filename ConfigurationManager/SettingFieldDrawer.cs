@@ -367,4 +367,6 @@ namespace ConfigurationManager
                     {
                         setting.Set(key);
                         _currentKeyboardShortcutToSet = null;
-                   
+                        break;
+                    }
+ 
