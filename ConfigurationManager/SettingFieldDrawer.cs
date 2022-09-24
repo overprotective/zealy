@@ -371,4 +371,5 @@ namespace ConfigurationManager
                     }
                 }
 
-                if (GUILayout.B
+                if (GUILayout.Button("Cancel", GUILayout.ExpandWidth(false)))
+  
