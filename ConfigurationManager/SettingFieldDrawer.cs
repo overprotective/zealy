@@ -376,4 +376,4 @@ namespace ConfigurationManager
             }
             else
             {
-                var acceptableValues = setting.AcceptableV
+                var acceptableValues = setting.AcceptableValues?.Length > 1 ? setting.AcceptableValues : 
