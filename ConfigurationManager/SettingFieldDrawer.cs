@@ -377,4 +377,4 @@ namespace ConfigurationManager
             else
             {
                 var acceptableValues = setting.AcceptableValues?.Length > 1 ? setting.AcceptableValues : Enum.GetValues(setting.SettingType);
-       
+                DrawComboboxField(setting, acceptableVa
