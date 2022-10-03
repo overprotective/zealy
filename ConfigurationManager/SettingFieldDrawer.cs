@@ -379,4 +379,5 @@ namespace ConfigurationManager
                 var acceptableValues = setting.AcceptableValues?.Length > 1 ? setting.AcceptableValues : Enum.GetValues(setting.SettingType);
                 DrawComboboxField(setting, acceptableValues, _instance.SettingWindowRect.yMax);
 
-                if (GUILayout.Button(new GUIContent("Set...", "Set the key by pressing any key on your keyboard."), 
+                if (GUILayout.Button(new GUIContent("Set...", "Set the key by pressing any key on your keyboard."), GUILayout.ExpandWidth(false)))
+                    _currentK
