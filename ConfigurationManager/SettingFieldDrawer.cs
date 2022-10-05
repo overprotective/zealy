@@ -380,4 +380,5 @@ namespace ConfigurationManager
                 DrawComboboxField(setting, acceptableValues, _instance.SettingWindowRect.yMax);
 
                 if (GUILayout.Button(new GUIContent("Set...", "Set the key by pressing any key on your keyboard."), GUILayout.ExpandWidth(false)))
-                    _currentK
+                    _currentKeyboardShortcutToSet = setting;
+            }
