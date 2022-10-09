@@ -382,3 +382,6 @@ namespace ConfigurationManager
                 if (GUILayout.Button(new GUIContent("Set...", "Set the key by pressing any key on your keyboard."), GUILayout.ExpandWidth(false)))
                     _currentKeyboardShortcutToSet = setting;
             }
+        }
+
+        private static void DrawKeyboardShor
