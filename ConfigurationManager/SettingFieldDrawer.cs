@@ -384,4 +384,6 @@ namespace ConfigurationManager
             }
         }
 
-        private static void DrawKeyboardShor
+        private static void DrawKeyboardShortcut(SettingEntryBase setting)
+        {
+   
