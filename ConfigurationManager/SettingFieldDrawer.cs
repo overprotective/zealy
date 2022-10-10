@@ -386,4 +386,4 @@ namespace ConfigurationManager
 
         private static void DrawKeyboardShortcut(SettingEntryBase setting)
         {
-   
+            if (_currentKeyboardShortcutToSet == se
