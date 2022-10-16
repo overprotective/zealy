@@ -391,4 +391,5 @@ namespace ConfigurationManager
                 GUILayout.Label("Press any key combination", GUILayout.ExpandWidth(true));
                 GUIUtility.keyboardControl = -1;
                 
-      
+                var input = UnityInput.Current;
+     
