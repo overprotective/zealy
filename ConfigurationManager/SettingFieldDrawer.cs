@@ -395,4 +395,6 @@ namespace ConfigurationManager
                 if (_keysToCheck == null) _keysToCheck = input.SupportedKeyCodes.Except(new[] { KeyCode.Mouse0, KeyCode.None }).ToArray();
                 foreach (var key in _keysToCheck)
                 {
-                    if (inpu
+                    if (input.GetKeyUp(key))
+                    {
+       
