@@ -397,4 +397,5 @@ namespace ConfigurationManager
                 {
                     if (input.GetKeyUp(key))
                     {
-                        setting.Set(new BepInEx.Configuration.KeyboardShortcut(key, _keysToCheck.Where(i
+                        setting.Set(new BepInEx.Configuration.KeyboardShortcut(key, _keysToCheck.Where(input.GetKey).ToArray()));
+                     
