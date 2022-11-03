@@ -404,4 +404,6 @@ namespace ConfigurationManager
                 }
 
                 if (GUILayout.Button("Cancel", GUILayout.ExpandWidth(false)))
-                    _cur
+                    _currentKeyboardShortcutToSet = null;
+            }
+     
