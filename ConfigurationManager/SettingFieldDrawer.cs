@@ -403,4 +403,5 @@ namespace ConfigurationManager
                     }
                 }
 
-                if (GUILayout.Button("Canc
+                if (GUILayout.Button("Cancel", GUILayout.ExpandWidth(false)))
+                    _cur
