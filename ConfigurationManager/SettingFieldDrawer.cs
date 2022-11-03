@@ -401,4 +401,6 @@ namespace ConfigurationManager
                         _currentKeyboardShortcutToSet = null;
                         break;
                     }
-    
+                }
+
+                if (GUILayout.Button("Canc
