@@ -408,4 +408,4 @@ namespace ConfigurationManager
             }
             else
             {
-                if (GU
+                if (GUILayout.Button(setting.Get().ToString(), GUILayout.ExpandWi
