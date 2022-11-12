@@ -408,4 +408,5 @@ namespace ConfigurationManager
             }
             else
             {
-                if (GUILayout.Button(setting.Get().ToString(), GUILayout.ExpandWi
+                if (GUILayout.Button(setting.Get().ToString(), GUILayout.ExpandWidth(true)))
+                    _currentKeyboardShortcutToSet 
