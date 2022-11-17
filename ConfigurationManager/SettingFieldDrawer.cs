@@ -417,4 +417,6 @@ namespace ConfigurationManager
                     _currentKeyboardShortcutToSet = null;
                 }
             }
-   
+        }
+
+        private static void DrawV
