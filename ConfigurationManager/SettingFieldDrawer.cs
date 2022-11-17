@@ -422,4 +422,5 @@ namespace ConfigurationManager
         private static void DrawVector2(SettingEntryBase obj)
         {
             var setting = (Vector2)obj.Get();
-            var 
+            var copy = setting;
+            setting.x
