@@ -419,4 +419,6 @@ namespace ConfigurationManager
             }
         }
 
-        private static void DrawV
+        private static void DrawVector2(SettingEntryBase obj)
+        {
+           
