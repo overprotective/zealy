@@ -414,4 +414,7 @@ namespace ConfigurationManager
                 if (GUILayout.Button("Clear", GUILayout.ExpandWidth(false)))
                 {
                     setting.Set(BepInEx.Configuration.KeyboardShortcut.Empty);
-                    _currentKeyboardShortcutTo
+                    _currentKeyboardShortcutToSet = null;
+                }
+            }
+   
