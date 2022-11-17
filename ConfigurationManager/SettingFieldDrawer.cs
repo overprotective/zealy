@@ -411,4 +411,5 @@ namespace ConfigurationManager
                 if (GUILayout.Button(setting.Get().ToString(), GUILayout.ExpandWidth(true)))
                     _currentKeyboardShortcutToSet = setting;
 
-                if (GUILayout.Butto
+                if (GUILayout.Button("Clear", GUILayout.ExpandWidth(false)))
+           
