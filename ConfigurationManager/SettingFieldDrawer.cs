@@ -425,4 +425,5 @@ namespace ConfigurationManager
             var copy = setting;
             setting.x = DrawSingleVectorSlider(setting.x, "X");
             setting.y = DrawSingleVectorSlider(setting.y, "Y");
-       
+            if (setting != copy) obj.Set(setting);
+      
