@@ -430,4 +430,5 @@ namespace ConfigurationManager
 
         private static void DrawVector3(SettingEntryBase obj)
         {
-          
+            var setting = (Vector3)obj.Get();
+      
