@@ -432,4 +432,4 @@ namespace ConfigurationManager
         {
             var setting = (Vector3)obj.Get();
             var copy = setting;
-            setti
+            setting.x = DrawSingleVectorSlider(setting.x, "X")
