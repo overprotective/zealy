@@ -434,4 +434,5 @@ namespace ConfigurationManager
             var copy = setting;
             setting.x = DrawSingleVectorSlider(setting.x, "X");
             setting.y = DrawSingleVectorSlider(setting.y, "Y");
-            setting.z = DrawSingleVec
+            setting.z = DrawSingleVectorSlider(setting.z, "Z");
+            if (setting != c
