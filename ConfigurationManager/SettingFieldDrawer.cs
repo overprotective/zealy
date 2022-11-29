@@ -438,4 +438,4 @@ namespace ConfigurationManager
             if (setting != copy) obj.Set(setting);
         }
 
-        priv
+        private static void DrawVector4(SettingEntry
