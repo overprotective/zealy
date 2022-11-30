@@ -438,4 +438,6 @@ namespace ConfigurationManager
             if (setting != copy) obj.Set(setting);
         }
 
-        private static void DrawVector4(SettingEntry
+        private static void DrawVector4(SettingEntryBase obj)
+        {
+            var setting = (Vector4)
