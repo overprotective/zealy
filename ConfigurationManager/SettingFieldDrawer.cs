@@ -445,4 +445,5 @@ namespace ConfigurationManager
             setting.x = DrawSingleVectorSlider(setting.x, "X");
             setting.y = DrawSingleVectorSlider(setting.y, "Y");
             setting.z = DrawSingleVectorSlider(setting.z, "Z");
-            setting.w = DrawSingleVectorSlider(setting.w
+            setting.w = DrawSingleVectorSlider(setting.w, "W");
+            if (setting != cop
