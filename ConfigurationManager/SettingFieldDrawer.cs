@@ -449,4 +449,6 @@ namespace ConfigurationManager
             if (setting != copy) obj.Set(setting);
         }
 
-        private static void DrawQuaternion(SettingEntryBase ob
+        private static void DrawQuaternion(SettingEntryBase obj)
+        {
+            var setting = (Quaternion)obj
