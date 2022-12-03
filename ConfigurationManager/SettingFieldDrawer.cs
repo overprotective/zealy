@@ -451,4 +451,6 @@ namespace ConfigurationManager
 
         private static void DrawQuaternion(SettingEntryBase obj)
         {
-            var setting = (Quaternion)obj
+            var setting = (Quaternion)obj.Get();
+            var copy = setting;
+           
