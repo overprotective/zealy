@@ -453,4 +453,5 @@ namespace ConfigurationManager
         {
             var setting = (Quaternion)obj.Get();
             var copy = setting;
-            setting.x = DrawSingleVectorSlider(setting.x, "X
+            setting.x = DrawSingleVectorSlider(setting.x, "X");
+            setting.y = DrawSingleVector
