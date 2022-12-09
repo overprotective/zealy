@@ -457,4 +457,7 @@ namespace ConfigurationManager
             setting.y = DrawSingleVectorSlider(setting.y, "Y");
             setting.z = DrawSingleVectorSlider(setting.z, "Z");
             setting.w = DrawSingleVectorSlider(setting.w, "W");
-            if (setti
+            if (setting != copy) obj.Set(setting);
+        }
+
+        p
