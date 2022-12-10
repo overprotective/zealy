@@ -460,4 +460,6 @@ namespace ConfigurationManager
             if (setting != copy) obj.Set(setting);
         }
 
-        private static float DrawSingleVectorSlider(float setting, st
+        private static float DrawSingleVectorSlider(float setting, string label)
+        {
+            GUILayo
