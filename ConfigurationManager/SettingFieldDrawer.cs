@@ -460,4 +460,4 @@ namespace ConfigurationManager
             if (setting != copy) obj.Set(setting);
         }
 
-        p
+        private static float DrawSingleVectorSlider(float setting, st
