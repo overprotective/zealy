@@ -462,4 +462,4 @@ namespace ConfigurationManager
 
         private static float DrawSingleVectorSlider(float setting, string label)
         {
-            GUILayo
+            GUILayout.Label(label, GUILayout.ExpandWidth(f
