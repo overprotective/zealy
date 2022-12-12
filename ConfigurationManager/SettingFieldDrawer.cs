@@ -463,4 +463,4 @@ namespace ConfigurationManager
         private static float DrawSingleVectorSlider(float setting, string label)
         {
             GUILayout.Label(label, GUILayout.ExpandWidth(false));
-            float.TryParse(GUILayout.TextField(setting.ToString("F", CultureInfo.InvariantC
+            float.TryParse(GUILayout.TextField(setting.ToString("F", CultureInfo.InvariantCulture), GUILayout.ExpandWidth(true)), Number
