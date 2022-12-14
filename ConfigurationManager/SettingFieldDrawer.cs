@@ -467,4 +467,5 @@ namespace ConfigurationManager
             return x;
         }
 
-        private
+        private static void DrawColor(SettingEntryBase obj)
+        {
