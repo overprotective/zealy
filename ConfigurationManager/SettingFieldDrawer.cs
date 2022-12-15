@@ -469,3 +469,5 @@ namespace ConfigurationManager
 
         private static void DrawColor(SettingEntryBase obj)
         {
+            var setting = (Color)obj.Get();
+
