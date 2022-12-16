@@ -474,4 +474,5 @@ namespace ConfigurationManager
             if (!_colorCache.TryGetValue(obj, out var cacheEntry))
             {
                 cacheEntry = new ColorCacheEntry { Tex = new Texture2D(40, 10, TextureFormat.ARGB32, false), Last = setting };
-                cach
+                cacheEntry.Tex.FillTexture(setting);
+             
