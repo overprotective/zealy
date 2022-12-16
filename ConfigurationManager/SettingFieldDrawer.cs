@@ -478,4 +478,4 @@ namespace ConfigurationManager
                 _colorCache[obj] = cacheEntry;
             }
 
-            GUI
+            GUILayout.Label("R", GUILayout.ExpandWidth(false));
