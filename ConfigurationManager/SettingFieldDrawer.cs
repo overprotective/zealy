@@ -475,4 +475,7 @@ namespace ConfigurationManager
             {
                 cacheEntry = new ColorCacheEntry { Tex = new Texture2D(40, 10, TextureFormat.ARGB32, false), Last = setting };
                 cacheEntry.Tex.FillTexture(setting);
-             
+                _colorCache[obj] = cacheEntry;
+            }
+
+            GUI
