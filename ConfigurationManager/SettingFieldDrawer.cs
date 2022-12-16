@@ -473,4 +473,4 @@ namespace ConfigurationManager
 
             if (!_colorCache.TryGetValue(obj, out var cacheEntry))
             {
-                cacheEntry = new Co
+                cacheEntry = new ColorCacheEntry { Tex = new Texture2D(40, 10, TextureFor
