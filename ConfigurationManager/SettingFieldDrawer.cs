@@ -471,3 +471,4 @@ namespace ConfigurationManager
         {
             var setting = (Color)obj.Get();
 
+            if (!_colorCache.TryGetValue(obj, out var cacheEntry)
