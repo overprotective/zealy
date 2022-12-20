@@ -479,3 +479,4 @@ namespace ConfigurationManager
             }
 
             GUILayout.Label("R", GUILayout.ExpandWidth(false));
+            setting.r = GUILayout.HorizontalSlider(
