@@ -481,4 +481,5 @@ namespace ConfigurationManager
             GUILayout.Label("R", GUILayout.ExpandWidth(false));
             setting.r = GUILayout.HorizontalSlider(setting.r, 0f, 1f, GUILayout.ExpandWidth(true));
             GUILayout.Label("G", GUILayout.ExpandWidth(false));
-            setting.g = GUILayout.HorizontalSlider(setting.g, 0f, 1f, GUILayout
+            setting.g = GUILayout.HorizontalSlider(setting.g, 0f, 1f, GUILayout.ExpandWidth(true));
+            GUILayout
