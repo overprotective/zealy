@@ -489,4 +489,6 @@ namespace ConfigurationManager
 
             GUILayout.Space(4);
 
-            if 
+            if (setting != cacheEntry.Last)
+            {
+      
