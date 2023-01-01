@@ -492,4 +492,5 @@ namespace ConfigurationManager
             if (setting != cacheEntry.Last)
             {
                 obj.Set(setting);
-                cacheEn
+                cacheEntry.Tex.FillTexture(setting);
+                cac
