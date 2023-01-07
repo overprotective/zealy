@@ -496,4 +496,7 @@ namespace ConfigurationManager
                 cacheEntry.Last = setting;
             }
 
-            GUILayout.Label(cacheEntry.Tex, GUILayout.ExpandWidth(false)
+            GUILayout.Label(cacheEntry.Tex, GUILayout.ExpandWidth(false));
+        }
+
+        private sealed class ColorCa
