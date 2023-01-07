@@ -499,4 +499,7 @@ namespace ConfigurationManager
             GUILayout.Label(cacheEntry.Tex, GUILayout.ExpandWidth(false));
         }
 
-        private sealed class ColorCa
+        private sealed class ColorCacheEntry
+        {
+            public Color Last;
+       
