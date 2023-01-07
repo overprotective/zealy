@@ -496,4 +496,4 @@ namespace ConfigurationManager
                 cacheEntry.Last = setting;
             }
 
-            
+            GUILayout.Label(cacheEntry.Tex, GUILayout.ExpandWidth(false)
