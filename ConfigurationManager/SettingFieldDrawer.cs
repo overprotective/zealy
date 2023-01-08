@@ -502,4 +502,7 @@ namespace ConfigurationManager
         private sealed class ColorCacheEntry
         {
             public Color Last;
-       
+            public Texture2D Tex;
+        }
+    }
+}
