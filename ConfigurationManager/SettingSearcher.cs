@@ -65,3 +65,32 @@ namespace ConfigurationManager
                     enabledSetting.IsAdvanced = true;
                     detected.Add(enabledSetting);
                 }
+
+                if (detected.Count > 0)
+                    results = results.Concat(detected);
+            }
+        }
+
+        /// <summary>
+        /// Get entries for all core BepInEx settings
+        /// </summary>
+        private static IEnumerable<SettingEntryBase> GetBepInExCoreConfig()
+        {
+            var coreConfigProp = typeof(ConfigFile).GetProperty("CoreConfig", BindingFlags.Static | BindingFlags.NonPublic);
+            if (coreConfigProp == null) throw new ArgumentNullException(nameof(coreConfigProp));
+
+            var coreConfig = (ConfigFile)coreConfigProp.GetValue(null, null);
+            var bepinMeta = new BepInPlugin("BepInEx", "BepInEx", typeof(BepInEx.Bootstrap.Chainloader).Assembly.GetName().Version.ToString());
+
+            return coreConfig.Select(kvp => (SettingEntryBase)new ConfigSettingEntry(kvp.Value, null) { IsAdvanced = true, PluginInfo = bepinMeta });
+        }
+
+        /// <summary>
+        /// Get entries for all settings of a plugin
+        /// </summary>
+        private static IEnumerable<ConfigSettingEntry> GetPluginConfig(BaseUnityPlugin plugin)
+        {
+            return plugin.Config.Select(kvp => new ConfigSettingEntry(kvp.Value, plugin));
+        }
+    }
+}
