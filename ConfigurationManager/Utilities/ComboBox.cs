@@ -69,3 +69,50 @@ namespace ConfigurationManager.Utilities
                 }
                 isClickedComboButton = true;
             }
+
+            if (isClickedComboButton)
+            {
+                GUI.enabled = false;
+                GUI.color = new Color(1, 1, 1, 2);
+
+                var location = GUIUtility.GUIToScreenPoint(new Vector2(Rect.x, Rect.y + listStyle.CalcHeight(listContent[0], 1.0f)));
+                var size = new Vector2(Rect.width, listStyle.CalcHeight(listContent[0], 1.0f) * listContent.Length);
+
+                var innerRect = new Rect(0, 0, size.x, size.y);
+
+                var outerRectScreen = new Rect(location.x, location.y, size.x, size.y);
+                if (outerRectScreen.yMax > _windowYmax)
+                {
+                    outerRectScreen.height = _windowYmax - outerRectScreen.y;
+                    outerRectScreen.width += 20;
+                }
+
+                if (currentMousePosition != Vector2.zero && outerRectScreen.Contains(GUIUtility.GUIToScreenPoint(currentMousePosition)))
+                    done = false;
+
+                CurrentDropdownDrawer = () =>
+                {
+                    GUI.enabled = true;
+
+                    var scrpos = GUIUtility.ScreenToGUIPoint(location);
+                    var outerRectLocal = new Rect(scrpos.x, scrpos.y, outerRectScreen.width, outerRectScreen.height);
+
+                    GUI.Box(outerRectLocal, GUIContent.none,
+                        new GUIStyle { normal = new GUIStyleState { background = ConfigurationManager.WindowBackground } });
+
+                    _scrollPosition = GUI.BeginScrollView(outerRectLocal, _scrollPosition, innerRect, false, false);
+                    {
+                        const int initialSelectedItem = -1;
+                        var newSelectedItemIndex = GUI.SelectionGrid(innerRect, initialSelectedItem, listContent, 1, listStyle);
+                        if (newSelectedItemIndex != initialSelectedItem)
+                        {
+                            onItemSelected(newSelectedItemIndex);
+                            isClickedComboButton = false;
+                        }
+                    }
+                    GUI.EndScrollView(true);
+                };
+            }
+
+            if (done)
+                isClickedComboButton = false;
