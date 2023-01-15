@@ -116,3 +116,9 @@ namespace ConfigurationManager.Utilities
 
             if (done)
                 isClickedComboButton = false;
+        }
+
+        private Vector2 _scrollPosition = Vector2.zero;
+        public static Action CurrentDropdownDrawer { get; set; }
+    }
+}
