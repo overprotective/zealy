@@ -92,3 +92,49 @@ namespace ConfigurationManager.Utilities
             }
 
             if (Directory.Exists(Application.persistentDataPath))
+            {
+                var file = Directory.GetFiles(Application.persistentDataPath, "output_log.txt", SearchOption.AllDirectories).FirstOrDefault();
+                candidates.Add(file);
+            }
+
+            var latestLog = candidates.Where(File.Exists).OrderByDescending(File.GetLastWriteTimeUtc).FirstOrDefault();
+            if (TryOpen(latestLog)) return;
+
+            candidates.Clear();
+            // Fall back to more aggresive brute search
+            // BepInEx 5.x log file, can be "LogOutput.log.1" or higher if multiple game instances run
+            candidates.AddRange(Directory.GetFiles(rootDir, "LogOutput.log*", SearchOption.AllDirectories));
+            candidates.AddRange(Directory.GetFiles(rootDir, "output_log.txt", SearchOption.AllDirectories));
+            latestLog = candidates.Where(File.Exists).OrderByDescending(File.GetLastWriteTimeUtc).FirstOrDefault();
+            if (TryOpen(latestLog)) return;
+
+            throw new FileNotFoundException("No log files were found");
+        }
+
+        public static string GetWebsite(BaseUnityPlugin bepInPlugin)
+        {
+            if (bepInPlugin == null) return null;
+            try
+            {
+                var fileName = bepInPlugin.GetType().Assembly.Location;
+                if (!File.Exists(fileName)) return null;
+                var fi = FileVersionInfo.GetVersionInfo(fileName);
+                return new[]
+                {
+                    fi.CompanyName,
+                    fi.FileDescription,
+                    fi.Comments,
+                    fi.LegalCopyright,
+                    fi.LegalTrademarks
+                }.FirstOrDefault(x => Uri.IsWellFormedUriString(x, UriKind.Absolute));
+            }
+            catch (Exception e)
+            {
+                ConfigurationManager.Logger.LogWarning($"Failed to get URI for {bepInPlugin?.Info?.Metadata?.Name} - {e.Message}");
+                return null;
+            }
+        }
+
+        public static void OpenWebsite(string url)
+        {
+            try
