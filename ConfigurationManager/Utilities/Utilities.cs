@@ -138,3 +138,14 @@ namespace ConfigurationManager.Utilities
         public static void OpenWebsite(string url)
         {
             try
+            {
+                if (string.IsNullOrEmpty(url)) throw new Exception("Empty URL");
+                Process.Start(url);
+            }
+            catch (Exception ex)
+            {
+                ConfigurationManager.Logger.Log(LogLevel.Message | LogLevel.Warning, $"Failed to open URL {url}\nCause: {ex.Message}");
+            }
+        }
+    }
+}
