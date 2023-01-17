@@ -1,2 +1,2 @@
 ﻿// Made by MarC0 / ManlyMarco
-// C
+// Copyright 2018 GNU General Public License v3.0
