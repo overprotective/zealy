@@ -8,4 +8,6 @@ namespace ConfigurationManager
     /// <summary>
     /// Arguments representing a change in value
     /// </summary>
-    public sealed 
+    public sealed class ValueChangedEventArgs<TValue> : EventArgs
+    {
+        /
