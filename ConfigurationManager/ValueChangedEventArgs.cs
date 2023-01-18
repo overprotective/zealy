@@ -3,4 +3,7 @@
 
 using System;
 
-namespace ConfigurationManage
+namespace ConfigurationManager
+{
+    /// <summary>
+    /// Arguments representing a cha
