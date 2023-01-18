@@ -6,4 +6,6 @@ using System;
 namespace ConfigurationManager
 {
     /// <summary>
-    /// Arguments representing a cha
+    /// Arguments representing a change in value
+    /// </summary>
+    public sealed 
