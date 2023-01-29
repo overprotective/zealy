@@ -11,4 +11,6 @@ namespace ConfigurationManager
     public sealed class ValueChangedEventArgs<TValue> : EventArgs
     {
         /// <inheritdoc />
-        public Valu
+        public ValueChangedEventArgs(TValue newValue)
+        {
+      
