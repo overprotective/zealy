@@ -13,4 +13,6 @@ namespace ConfigurationManager
         /// <inheritdoc />
         public ValueChangedEventArgs(TValue newValue)
         {
-      
+            NewValue = newValue;
+        }
+        /// <sum
