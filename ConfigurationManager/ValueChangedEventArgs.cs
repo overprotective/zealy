@@ -15,4 +15,6 @@ namespace ConfigurationManager
         {
             NewValue = newValue;
         }
-        /// <sum
+        /// <summary>
+        /// Newly assigned value
+    
