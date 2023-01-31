@@ -17,4 +17,5 @@ namespace ConfigurationManager
         }
         /// <summary>
         /// Newly assigned value
-    
+        /// </summary>
+        public TValue NewValue { get
