@@ -1,2 +1,3 @@
 param($installPath, $toolsPath, $package, $project)
-$asms = $package.Assembl
+$asms = $package.AssemblyReferences | %{$_.Name} 
+foreach ($reference in $project
