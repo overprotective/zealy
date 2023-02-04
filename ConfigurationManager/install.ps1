@@ -1,1 +1,2 @@
-param($installPath, $toolsPath, $
+param($installPath, $toolsPath, $package, $project)
+$asms = $package.Assembl
