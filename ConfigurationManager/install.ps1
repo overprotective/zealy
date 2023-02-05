@@ -4,4 +4,6 @@ foreach ($reference in $project.Object.References)
 {
     if ($asms -contains $reference.Name + ".dll") 
     {
-        $ref
+        $reference.CopyLocal = $false;
+    }
+}
