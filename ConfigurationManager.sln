@@ -7,4 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationManager", "Con
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{F28F879D-0FA8-488C-A696-BDCCD27099B9}"
 	ProjectSection(SolutionItems) = preProject
-		ConfigurationManagerAttributes.cs = Configuratio
+		ConfigurationManagerAttributes.cs = ConfigurationManagerAttributes.cs
+	EndProjectSection
+EndProject
