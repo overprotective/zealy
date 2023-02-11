@@ -11,4 +11,5 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatfo
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any C
