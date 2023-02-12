@@ -14,4 +14,5 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobal
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration
