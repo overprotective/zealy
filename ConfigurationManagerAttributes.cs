@@ -142,3 +142,9 @@ internal sealed class ConfigurationManagerAttributes
     /// Custom converter from setting type to string for the built-in editor textboxes.
     /// </summary>
     public System.Func<object, string> ObjToStr;
+
+    /// <summary>
+    /// Custom converter from string to setting type for the built-in editor textboxes.
+    /// </summary>
+    public System.Func<string, object> StrToObj;
+}
