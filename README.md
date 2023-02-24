@@ -40,3 +40,50 @@ public enum MyEnum
 ```
 
 ### How to allow user to change my keyboard shorcuts / How to easily check for key presses?
+Add a setting of type KeyboardShortcut. Use the value of this setting to check for inputs (recommend using IsDown) inside of your Update method.
+
+The KeyboardShortcut class supports modifier keys - Shift, Control and Alt. They are properly handled, preventing common problems like K+Shift+Control triggering K+Shift when it shouldn't have.
+```c#
+private ConfigEntry<KeyboardShortcut> ShowCounter { get; set; }
+
+public Constructor()
+{
+    ShowCounter = Config.Bind("Hotkeys", "Show FPS counter", new KeyboardShortcut(KeyCode.U, KeyCode.LeftShift));
+}
+
+private void Update()
+{
+    if (ShowCounter.Value.IsDown())
+    {
+        // Handle the key press
+    }
+}
+```
+
+## Overriding default Configuration Manager behavior
+You can change how a setting is shown inside the configuration manager window by passing an instance of a special class as a tag of the setting. The special class code can be downloaded [here](ConfigurationManagerAttributes.cs). Simply download the .cs file and drag it into your project.
+- You do not have to reference ConfigurationManager.dll for this to work.
+- The class will work as long as name of the class and declarations of its fields remain unchanged. 
+- Avoid making the class public to prevent conflicts with other plugins. If you want to share it between your plugins either give each a copy, or move it to your custom namespace.
+- If the ConfigurationManager plugin is not installed in the game, this class will be safely ignored and your plugin will work as normal.
+
+Here's an example of overriding order of settings and marking one of the settings as advanced:
+```c#
+// Override IsAdvanced and Order
+Config.Bind("X", "1", 1, new ConfigDescription("", null, new ConfigurationManagerAttributes { IsAdvanced = true, Order = 3 }));
+// Override only Order, IsAdvanced stays as the default value assigned by ConfigManager
+Config.Bind("X", "2", 2, new ConfigDescription("", null, new ConfigurationManagerAttributes { Order = 1 }));
+Config.Bind("X", "3", 3, new ConfigDescription("", null, new ConfigurationManagerAttributes { Order = 2 }));
+```
+
+### How to make a custom editor for my setting?
+If you are using a setting type that is not supported by ConfigurationManager, you can add a drawer Action for it. The Action will be executed inside OnGUI, use GUILayout to draw your setting as shown in the example below.
+
+To use a custom seting drawer for an individual setting, use the `CustomDrawer` field in the attribute class. See above for more info on the attribute class.
+```c#
+void Start()
+{
+    // Add the drawer as a tag to this setting.
+    Config.Bind("Section", "Key", "Some value" 
+        new ConfigDescription("Desc", null, new ConfigurationManagerAttributes{ CustomDrawer = MyDrawer });
+}
