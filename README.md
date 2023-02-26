@@ -87,3 +87,25 @@ void Start()
     Config.Bind("Section", "Key", "Some value" 
         new ConfigDescription("Desc", null, new ConfigurationManagerAttributes{ CustomDrawer = MyDrawer });
 }
+
+static void MyDrawer(BepInEx.Configuration.ConfigEntryBase entry)
+{
+    // Make sure to use GUILayout.ExpandWidth(true) to use all available space
+    GUILayout.Label(entry.BoxedValue, GUILayout.ExpandWidth(true));
+}
+```
+#### Add a custom editor globally
+You can specify a drawer for all settings of a setting type. Do this by using `ConfigurationManager.RegisterCustomSettingDrawer(Type, Action<SettingEntryBase>)`.
+
+**Warning:** This requires you to reference ConfigurationManager.dll in your project and is not recommended unless you are sure all users will have it installed. It's usually better to use the above method to add the custom drawer to each setting individually instead.
+```c#
+void Start()
+{
+    ConfigurationManager.RegisterCustomSettingDrawer(typeof(MyType), CustomDrawer);
+}
+
+static void CustomDrawer(SettingEntryBase entry)
+{
+    GUILayout.Label((MyType)entry.Get(), GUILayout.ExpandWidth(true));
+}
+```
